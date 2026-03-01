@@ -74,7 +74,7 @@ const Softgoods_part = () => {
           </div>
 
           {/* ================= Cards ================= */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 pb-12">
             {/* Card 1 */}
             <div className="group rounded-xl overflow-hidden shadow hover:shadow-xl transition">
               <div className="relative h-64">
@@ -197,8 +197,8 @@ const Softgoods_part = () => {
               </div>
             </div>
           </div>
-          <Sample_part />
         </Container>
+          <Sample_part />
       </section>
     </div>
   );
