@@ -36,7 +36,9 @@ const Goverment_part = () => {
               <p className="text-white text-base leading-relaxed max-w-[720px]">
                 Building Stronger, Smarter, and More Reliable Supply Chains
                 <span className="block text-white text-base leading-relaxed mt-3">
-                  We help businesses evaluate, develop, and monitor suppliers to ensure consistent quality, operational efficiency, and long-term partnership success.
+                  We help businesses evaluate, develop, and monitor suppliers to
+                  ensure consistent quality, operational efficiency, and
+                  long-term partnership success.
                 </span>
               </p>
             </div>
@@ -66,7 +68,7 @@ const Goverment_part = () => {
           </div>
 
           {/* ================= Cards ================= */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 pb-12">
             {/* Card 1 */}
             <div className="group rounded-xl overflow-hidden shadow hover:shadow-xl transition">
               <div className="relative h-64">
@@ -84,45 +86,9 @@ const Goverment_part = () => {
                 </div>
               </div>
             </div>
-
-            {/* Card 2 */}
-            {/* <div className="group rounded-xl overflow-hidden shadow hover:shadow-xl transition">
-              <div className="relative h-64">
-                <Image
-                  src="/productinspectionbanner.png"
-                  alt="Industrial Product Inspection"
-                  fill
-                  className="object-cover group-hover:scale-105 transition duration-500"
-                />
-                <div className="absolute inset-0 bg-black/50" />
-                <div className="absolute bottom-4 left-4 text-primary font-semibold text-lg">
-                  <a className="hover:text-white hover:underline" href="#">
-                    Services
-                  </a>
-                </div>
-              </div>
-            </div> */}
-
-            {/* Card 3 */}
-            {/* <div className="group rounded-xl overflow-hidden shadow hover:shadow-xl transition">
-              <div className="relative h-64">
-                <Image
-                  src="/productinspectionbanner.png"
-                  alt="Full Inspection"
-                  fill
-                  className="object-cover group-hover:scale-105 transition duration-500"
-                />
-                <div className="absolute inset-0 bg-black/50" />
-                <div className="absolute bottom-4 left-4 text-primary font-semibold text-lg">
-                  <a className="hover:text-white hover:underline" href="#">
-                    Engineering
-                  </a>
-                </div>
-              </div>
-            </div> */}
           </div>
-          <Sample_part />
         </Container>
+        <Sample_part />
       </section>
     </div>
   );

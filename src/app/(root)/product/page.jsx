@@ -190,8 +190,8 @@ const Product_part = () => {
               </div>
             </div>
           </div>
-          <Sample_part />
         </Container>
+          <Sample_part />
       </section>
     </div>
   );

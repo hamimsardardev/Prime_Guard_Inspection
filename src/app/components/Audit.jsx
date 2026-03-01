@@ -2,6 +2,7 @@ import React from "react";
 import Container from "./common/Container";
 import Image from "next/image";
 import { FaArrowRightLong } from "react-icons/fa6";
+import Link from "next/link";
 
 const Audit = () => {
   return (
@@ -45,7 +46,8 @@ const Audit = () => {
                 </p>
 
                 <div>
-                  <button
+                  <Link
+                    href="/resourses/factoryaudit"
                     type="button"
                     className="relative h-[50px] w-40 inline-flex items-center justify-center overflow-hidden bg-primary text-white shadow-2xl transition-all before:absolute before:h-0 before:w-0 before:rounded-full before:bg-gray-600 before:duration-500 before:ease-out hover:shadow-primary hover:before:h-56 hover:before:w-56 cursor-pointer"
                   >
@@ -53,7 +55,7 @@ const Audit = () => {
                       Learn More
                       <FaArrowRightLong className="transition-transform duration-300 group-hover:translate-x-1 group-hover:scale-[1.8]" />
                     </span>
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>

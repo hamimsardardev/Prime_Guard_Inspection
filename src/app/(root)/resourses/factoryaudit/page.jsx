@@ -1,6 +1,7 @@
 "use client";
 
 import Container from "@/app/components/common/Container";
+import Contact_Part from "@/app/components/Contact_Part";
 import Qutation_form from "@/app/components/Qutation_form";
 import Sample_part from "@/app/components/Sample_part";
 import Image from "next/image";
@@ -22,9 +23,25 @@ const FactoryAudit = () => {
 
   return (
     <div>
-      <section className="py-20 ">
+      {/* banner */}
+      <section className="bg-[url('/factoryauditbanner.png')] bg-cover bg-center">
+        <div className="bg-gray-900/80">
+          <Container>
+            <div className="space-y-4 py-32 md:py-56">
+              <h2 className="text-3xl md:text-4xl text-primary font-semibold leading-tight ">
+                PGI FACTORY AUDIT
+              </h2>
+              <p className="w-auto md:w-[420px] lg:w-[560px] text-[16px] md:text-[16px] lg:text-[18px] text-white font-normal leading-tight">
+                Ensuring quality, safety, and compliance for stationery,
+                packaging, handmade crafts, gift items, and paper products.
+              </p>
+            </div>
+          </Container>
+        </div>
+      </section>
+      <section>
         <Container>
-          <div className=" px-6 grid lg:grid-cols-2 gap-12 items-center">
+          <div className="py-20 px-6 grid lg:grid-cols-2 gap-12 items-center border-t-2 border-gray-300">
             <div className="relative w-full h-[350px] rounded-xl overflow-hidden shadow-lg">
               <Image
                 src="/vr-audit.jpg"
@@ -35,7 +52,7 @@ const FactoryAudit = () => {
             </div>
 
             <div>
-              <h1 className="text-[36px] font-bold text-primary mb-4">
+              <h1 className="text-[36px] font-bold text-white mb-4">
                 Factory Audit
               </h1>
 
@@ -303,7 +320,8 @@ const FactoryAudit = () => {
             </div>
           </div>
         </Container>
-        <Sample_part/>
+        <Sample_part />
+        <Contact_Part />
       </section>
     </div>
   );

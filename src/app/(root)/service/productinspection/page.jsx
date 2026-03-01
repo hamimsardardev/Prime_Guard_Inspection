@@ -35,7 +35,7 @@ const Productinspection_part = () => {
 
               <p className="text-white text-base leading-relaxed max-w-[720px]">
                 PGI conducts comprehensive product inspection, industrial
-                product inspection, full inspection and loading supervision. GIS
+                product inspection, full inspection and loading supervision. PGI
                 product quality inspection services ensure product quality
                 throughout your entire consumer goods and industrial products
                 supply chain with our unrivaled experience in managing all types
@@ -72,7 +72,7 @@ const Productinspection_part = () => {
           </div>
 
           {/* ================= Cards ================= */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 pb-12">
             {/* Card 1 */}
             <div className="group rounded-xl overflow-hidden shadow hover:shadow-xl transition">
               <div className="relative h-64">
@@ -161,8 +161,8 @@ const Productinspection_part = () => {
               </div>
             </div>
           </div>
-          <Sample_part />
         </Container>
+          <Sample_part />
       </section>
     </div>
   );

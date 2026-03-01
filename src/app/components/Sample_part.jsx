@@ -1,170 +1,64 @@
 import React from "react";
 import Container from "./common/Container";
+import Image from "next/image";
+import { FaArrowRightLong } from "react-icons/fa6";
+import Link from "next/link";
 
 const Sample_part = () => {
   return (
     <div>
-      <section className="py-12 px-4 sm:px-6 lg:px-8">
+      <section
+        className="
+        relative bg-[url('/Samplepartimage.png')] bg-cover bg-center bg-fixed
+        before:absolute before:inset-0 before:bg-black/80 before:z-0
+      "
+      >
         <Container>
-          <div className="mx-auto max-w-4xl">
-            {/* Header / Hero Section */}
-            <div className="text-center mb-12">
-              <h1 className="text-[38px] font-bold tracking-tight text-primary sm:text-[24px]">
-                SAMPLE REPORT
-              </h1>
-              <p className="mt-6 text-lg leading-8 text-white max-w-3xl mx-auto">
-                PGI performs third party inspection, plant evaluation as well as
-                project quality management, product testing and inspection and
-                quality engineering consultation. Check out some examples of the
-                reports we provide below.
-              </p>
-            </div>
+          <div className="relative z-10 py-16 md:py-20 lg:py-24">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+              {/* Left - Image */}
+              <div className="order-2 lg:order-1">
+                <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/10">
+                  <Image
+                    src="/Samplepartimage2.png"
+                    alt="Factory audit inspection - 360 degree panoramic view"
+                    width={600}
+                    height={500}
+                    className="w-full h-auto object-cover"
+                    priority
+                  />
+                </div>
+              </div>
 
-            {/* Form Card */}
-            <div className="shadow-xl rounded-2xl overflow-hidden border border-gray-100">
-              <div className="px-8 py-10 sm:px-12">
-                <form className="space-y-6">
-                  {/* Grid for form fields */}
-                  <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-                    <div>
-                      <label
-                        htmlFor="company"
-                        className="block text-sm font-medium text-primary"
-                      >
-                        Company Name<span className="text-red-500">*</span>
-                      </label>
-                      <input
-                        type="text"
-                        id="company"
-                        required
-                        className="mt-1 block w-full text-white bg-gray-800 rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm py-2.5 px-4 border"
-                        placeholder="Your company name"
-                      />
-                    </div>
+              {/* Right - Text + Button */}
+              <div className="order-1 lg:order-2 text-third space-y-4 md:space-y-3">
+                <h2 className="text-[24px] md:text-[30px] lg:text-[38px] text-primary font-semibold tracking-tight">
+                  Sample Report
+                </h2>
 
-                    <div>
-                      <label
-                        htmlFor="name"
-                        className="block text-sm font-medium text-primary"
-                      >
-                        Name<span className="text-red-500">*</span>
-                      </label>
-                      <input
-                        type="text"
-                        id="name"
-                        required
-                        className="mt-1 block w-full text-white bg-gray-800 rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm py-2.5 px-4 border"
-                        placeholder="Full name"
-                      />
-                    </div>
+                <p className="w-auto lg:w-[560px] text-[14px] lg:text-[18px] font-medium text-white md:text-[16px] leading-[24px] ">
+                  A detailed report with inspection results and photographs helps to assess goods quality and safety when performing an inspection. Review a PGI sample report related to your product of interest.
+                </p>
 
-                    <div>
-                      <label
-                        htmlFor="email"
-                        className="block text-sm font-medium text-primary"
-                      >
-                        Email<span className="text-red-500">*</span>
-                      </label>
-                      <input
-                        type="email"
-                        id="email"
-                        required
-                        className="mt-1 block w-full text-white bg-gray-800 rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm py-2.5 px-4 border"
-                        placeholder="you@company.com"
-                      />
-                    </div>
-
-                    <div>
-                      <label
-                        htmlFor="phone"
-                        className="block text-sm font-medium text-primary"
-                      >
-                        Phone<span className="text-red-500">*</span>
-                      </label>
-                      <div className="flex mt-1">
-                        <select
-                          id="country-code"
-                          defaultValue="+1"
-                          className="rounded-l-lg border-r-0 text-white bg-gray-800 border-gray-300 bg-gray-50 text-gray-700 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm px-3 py-2.5"
-                        >
-                          <option>+1</option>
-                          <option>+880</option>
-                          <option>+44</option>
-                          <option>+91</option>
-                          {/* Add more as needed */}
-                        </select>
-                        <input
-                          type="tel"
-                          id="phone"
-                          required
-                          className="block w-full rounded-r-lg text-white bg-gray-800 border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm py-2.5 px-4 border"
-                          placeholder="Your phone number"
-                        />
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Service Select */}
-                  <div>
-                    <label
-                      htmlFor="service"
-                      className="block text-sm font-medium text-primary"
-                    >
-                      Service
-                    </label>
-                    <select
-                      id="service"
-                      className="mt-1 block w-full text-white bg-gray-800 rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm py-2.5 px-4 border"
-                    >
-                      <option>Please select a service</option>
-                      <option>Third Party Inspection</option>
-                      <option>Plant Evaluation</option>
-                      <option>Project Quality Management</option>
-                      <option>Product Testing & Inspection</option>
-                      <option>Quality Engineering Consultation</option>
-                    </select>
-                  </div>
-
-                  {/* Message */}
-                  <div>
-                    <label
-                      htmlFor="message"
-                      className="block text-sm font-medium text-primary"
-                    >
-                      Message<span className="text-red-500">*</span>
-                    </label>
-                    <textarea
-                      id="message"
-                      rows={4}
-                      required
-                      className="mt-1 block w-full text-white bg-gray-800 rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm py-2.5 px-4 border"
-                      placeholder="Tell us more about your request..."
-                    ></textarea>
-                  </div>
-
-                  {/* Submit Button */}
-                  <div className="pt-4 text-center">
-                    <button
-                      type="submit"
-                      className="w-full sm:w-auto px-10 py-3 bg-transparent border border-primary  text-primary font-medium rounded-lg shadow-md hover:bg-primary hover:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition-colors duration-200"
-                    >
-                      Get a Sample Report
-                    </button>
-                  </div>
-                </form>
+                <div>
+                  <Link
+                    href="/resourses/samplereport"
+                    type="button"
+                    className="relative h-[50px] w-50 inline-flex items-center justify-center overflow-hidden bg-primary text-white shadow-2xl transition-all before:absolute before:h-0 before:w-0 before:rounded-full before:bg-gray-600 before:duration-500 before:ease-out hover:shadow-primary hover:before:h-56 hover:before:w-56 cursor-pointer"
+                  >
+                    <span className="relative z-10 flex items-center gap-2">
+                      Get a Sample report
+                      <FaArrowRightLong className="transition-transform duration-300 group-hover:translate-x-1 group-hover:scale-[1.8]" />
+                    </span>
+                  </Link>
+                </div>
               </div>
             </div>
-
-            {/* Footer note */}
-            <p className="mt-8 text-center text-sm text-white">
-              We will get back to you shortly with a sample report.
-            </p>
           </div>
         </Container>
-      </section>    
+      </section>
     </div>
   );
 };
 
 export default Sample_part;
-
