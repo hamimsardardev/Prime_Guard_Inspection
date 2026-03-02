@@ -1,24 +1,49 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Container from "@/app/components/common/Container";
 import Sample_part from "@/app/components/Sample_part";
+import BookNow_form from "@/app/components/BookNow_form";
 
 const Productinspection_part = () => {
+  const [getQuotation, setgetQuotation] = useState(false);
+    
+      function handleQutationOpen() {
+        setgetQuotation(true);
+      }
+    
+      function handleQutationClose() {
+        setgetQuotation(false);
+      }
   return (
     <div>
       {/* ================= Banner Section ================= */}
       <section className="bg-[url('/productinspectionbanner.png')] bg-cover bg-center">
         <Container>
-          <div className="py-32 md:py-56">
-            <h2 className="text-3xl md:text-4xl text-primary font-semibold leading-tight">
+          <div className="py-32 md:py-56 space-y-4">
+            <h2 className="text-[24px] md:text-[30px] md:text-[36px] text-primary font-semibold leading-[36px]">
               Product Quality Control Inspection
             </h2>
-
-            <div className="mt-12">
-              <button className="relative h-[50px] w-44 inline-flex items-center justify-center overflow-hidden bg-primary text-white shadow-lg transition-all before:absolute before:h-0 before:w-0 before:rounded-full before:bg-gray-700 before:duration-500 before:ease-out hover:before:h-56 hover:before:w-56 cursor-pointer">
-                <span className="relative z-10">Get a Sample Report</span>
+            <p className="text-white text-[18px] leading-relaxed max-w-[720px]">
+              A Product Quality Control Inspection is the assessment for production capability and
+              performance of a factory against proven quality principles. Every
+              production site needs reliable manufacturing and quality control
+              systems to ensure customers are satisfied with their products. As
+              such, the key criteria assessed are policies, procedures and
+              records that would indicate the factory’s ability to deliver
+              consistent quality management over time, rather than at one given
+              time or only for certain products.
+            </p>
+            <div>
+              <button 
+              onClick={handleQutationOpen}
+              className="relative h-[50px] w-44 inline-flex items-center justify-center overflow-hidden bg-primary text-white shadow-lg transition-all before:absolute before:h-0 before:w-0 before:rounded-full before:bg-third before:duration-500 before:ease-out hover:before:h-56 hover:before:w-56 cursor-pointer">
+                <span className="relative z-10">Book Now</span>
               </button>
+                <BookNow_form
+                  isOpen={getQuotation}
+                  onClose={handleQutationClose}
+                />
             </div>
           </div>
         </Container>
@@ -69,6 +94,7 @@ const Productinspection_part = () => {
                 </div>
               </div>
             </div>
+            
           </div>
 
           {/* ================= Cards ================= */}
@@ -77,7 +103,7 @@ const Productinspection_part = () => {
             <div className="group rounded-xl overflow-hidden shadow hover:shadow-xl transition">
               <div className="relative h-64">
                 <Image
-                  src="/productinspectionbanner.png"
+                  src="/preproductionInspection.png"
                   alt="Product Inspection"
                   fill
                   className="object-cover group-hover:scale-105 transition duration-500"
@@ -94,7 +120,7 @@ const Productinspection_part = () => {
             <div className="group rounded-xl overflow-hidden shadow hover:shadow-xl transition">
               <div className="relative h-64">
                 <Image
-                  src="/productinspectionbanner.png"
+                  src="/preproductionimage.png"
                   alt="Product Inspection"
                   fill
                   className="object-cover group-hover:scale-105 transition duration-500"
@@ -112,7 +138,7 @@ const Productinspection_part = () => {
             <div className="group rounded-xl overflow-hidden shadow hover:shadow-xl transition">
               <div className="relative h-64">
                 <Image
-                  src="/productinspectionbanner.png"
+                  src="/preshipmentimage.png"
                   alt="Industrial Product Inspection"
                   fill
                   className="object-cover group-hover:scale-105 transition duration-500"
@@ -162,7 +188,7 @@ const Productinspection_part = () => {
             </div>
           </div>
         </Container>
-          <Sample_part />
+        <Sample_part />
       </section>
     </div>
   );

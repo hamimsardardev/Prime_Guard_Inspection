@@ -86,7 +86,7 @@ const Service = () => {
                 </div>
                 <div className="p-6 md:p-7 flex flex-col flex-grow  cursor-pointer">
                   <h3 className="text-[24px] md:text-2xl font-bold text-primary mb-4 hover:text-white transition-colors">
-                    <Link className="hover:underline" href="/service/goverment">
+                    <Link className="hover:underline" href="/service/auditservey">
                       Audit & Survey
                     </Link>
                   </h3>

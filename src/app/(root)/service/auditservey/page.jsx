@@ -1,10 +1,20 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Sample_part from "@/app/components/Sample_part";
 import Container from "@/app/components/common/Container";
+import BookNow_form from "@/app/components/BookNow_form";
 
 const Auditservey_part = () => {
+  const [getQuotation, setgetQuotation] = useState(false);
+  
+    function handleQutationOpen() {
+      setgetQuotation(true);
+    }
+  
+    function handleQutationClose() {
+      setgetQuotation(false);
+    }
   return (
     <div>
       {/* ================= Banner Section ================= */}
@@ -16,9 +26,15 @@ const Auditservey_part = () => {
             </h2>
 
             <div className="mt-12">
-              <button className="relative h-[50px] w-44 inline-flex items-center justify-center overflow-hidden bg-primary text-white shadow-lg transition-all before:absolute before:h-0 before:w-0 before:rounded-full before:bg-gray-700 before:duration-500 before:ease-out hover:before:h-56 hover:before:w-56 cursor-pointer">
-                <span className="relative z-10">Get a Sample Report</span>
+              <button 
+              onClick={handleQutationOpen}
+              className="relative h-[50px] w-44 inline-flex items-center justify-center overflow-hidden bg-primary text-white shadow-lg transition-all before:absolute before:h-0 before:w-0 before:rounded-full before:bg-third before:duration-500 before:ease-out hover:before:h-56 hover:before:w-56 cursor-pointer">
+                <span className="relative z-10">Book Now</span>
               </button>
+                <BookNow_form
+                  isOpen={getQuotation}
+                  onClose={handleQutationClose}
+                />
             </div>
           </div>
         </Container>

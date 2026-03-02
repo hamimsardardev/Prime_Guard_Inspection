@@ -9,39 +9,52 @@ import Qutation_form from "@/app/components/Qutation_form";
 
 const Service_part = () => {
   const [getQuotation, setgetQuotation] = useState(false);
-  
-    function handleQutationOpen() {
-      setgetQuotation(true);
-    }
-  
-    function handleQutationClose() {
-      setgetQuotation(false);
-    }
+
+  function handleQutationOpen() {
+    setgetQuotation(true);
+  }
+
+  function handleQutationClose() {
+    setgetQuotation(false);
+  }
   return (
     <div>
       <section className="bg-[url('/servicebanner.png')] bg-cover bg-center">
-      <div className="bg-black/50">
+        <div className="bg-black/60">
+          <Container>
+            <div className="py-32 md:py-56 space-y-4">
+              <h2 className="text-[24px] md:text-[30px] md:text-[36px] text-primary font-semibold leading-[36px]">
+                SERVICE
+              </h2>
+              <p className="text-white text-[18px] leading-relaxed max-w-[720px]">
+                We provide independent third-party inspection services to ensure
+                your products meet quality standards, specifications, and buyer
+                requirements before shipment. Our experienced inspectors verify
+                materials, production processes, and finished goods to minimize
+                risk and prevent costly defects.
+                <span className="mt-4 block text-white text-[18px] leading-relaxed max-w-[720px]">
+                  With accurate reporting, detailed photo documentation, and
+                  fast turnaround time, we help you maintain product quality,
+                  protect your brand reputation, and build trust with your
+                  customers worldwide.
+                </span>
+              </p>
 
-        <Container>
-          <div className="py-32 md:py-56">
-            <h2 className="text-3xl md:text-4xl text-primary font-semibold leading-tight">
-              SERVICE
-            </h2>
-
-            <div className="mt-12">
-              <button 
-              onClick={handleQutationOpen}
-              className="relative h-[50px] w-44 inline-flex items-center justify-center overflow-hidden bg-primary text-white shadow-lg transition-all before:absolute before:h-0 before:w-0 before:rounded-full before:bg-third before:duration-500 before:ease-out hover:before:h-56 hover:before:w-56 cursor-pointer">
-                <span className="relative z-10">Get Quotation</span>
-              </button>
+              <div>
+                <button
+                  onClick={handleQutationOpen}
+                  className="relative h-[50px] w-44 inline-flex items-center justify-center overflow-hidden bg-primary text-white shadow-lg transition-all before:absolute before:h-0 before:w-0 before:rounded-full before:bg-third before:duration-500 before:ease-out hover:before:h-56 hover:before:w-56 cursor-pointer"
+                >
+                  <span className="relative z-10">Get Quotation</span>
+                </button>
                 <Qutation_form
                   isOpen={getQuotation}
                   onClose={handleQutationClose}
                 />
+              </div>
             </div>
-          </div>
-        </Container>
-      </div>
+          </Container>
+        </div>
       </section>
 
       <section>
@@ -78,7 +91,10 @@ const Service_part = () => {
               <div className="space-y-6">
                 <div>
                   <h2 className="text-[24px] sm:text-[30px] md:text-[36px] lg:text-[48px] font-semibold text-white leading-[24px] md:leading-[36px] lg:leading-[48px]">
-                    <Link className="hover:underline" href="/service/productinspection">
+                    <Link
+                      className="hover:underline"
+                      href="/service/productinspection"
+                    >
                       Product Quality Inspection
                     </Link>
                   </h2>
@@ -121,7 +137,9 @@ const Service_part = () => {
 
               <div className="space-y-6 order-2 md:order-1">
                 <h2 className="text-[24px] sm:text-[30px] md:text-[36px] lg:text-[48px] font-semibold text-white leading-[24px] md:leading-[36px] lg:leading-[48px]">
-                  <Link className="hover:underline" href="/service/auditservey">Audit & Survey</Link>
+                  <Link className="hover:underline" href="/service/auditservey">
+                    Audit & Survey
+                  </Link>
                 </h2>
                 <ul className="space-y-1 text-primary text-[14px] md:text-[16px] lg:text-[18px] leading-relaxed">
                   <li className="flex gap-2 items-center text-center cursor-pointer hover:text-white hover:underline">
@@ -162,7 +180,10 @@ const Service_part = () => {
 
               <div className="space-y-6">
                 <h2 className="text-[24px] sm:text-[30px] md:text-[36px] lg:text-[48px] font-semibold text-white leading-[24px] md:leading-[36px] lg:leading-[48px]">
-                  <Link className="hover:underline" href="/service/supliermanagement">
+                  <Link
+                    className="hover:underline"
+                    href="/service/supliermanagement"
+                  >
                     Supplier Management & Development
                   </Link>
                 </h2>
@@ -176,7 +197,7 @@ const Service_part = () => {
             </section>
           </div>
         </Container>
-          <Sample_part />
+        <Sample_part />
       </section>
     </div>
   );
