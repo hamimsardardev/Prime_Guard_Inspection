@@ -4,6 +4,7 @@ import Image from "next/image";
 import Container from "@/app/components/common/Container";
 import Sample_part from "@/app/components/Sample_part";
 import Qutation_form from "@/app/components/Qutation_form";
+import Link from "next/link";
 
 const Craftpaper_part = () => {
   const [getQuotation, setgetQuotation] = useState(false);
@@ -31,15 +32,12 @@ const Craftpaper_part = () => {
               </p>
 
               <div>
-                <button 
-              onClick={handleQutationOpen}
-              className="relative h-[50px] w-44 inline-flex items-center justify-center overflow-hidden bg-primary text-white shadow-lg transition-all before:absolute before:h-0 before:w-0 before:rounded-full before:bg-third before:duration-500 before:ease-out hover:before:h-56 hover:before:w-56">
-                <span className="relative z-10">Get Quotation</span>
-              </button>
-                <Qutation_form
-                  isOpen={getQuotation}
-                  onClose={handleQutationClose}
-                />
+                <Link
+                href="/resourses/samplereport"
+                className="relative h-[50px] w-57 inline-flex items-center justify-center overflow-hidden bg-primary text-white shadow-lg transition-all before:absolute before:h-0 before:w-0 before:rounded-full before:bg-third before:duration-500 before:ease-out hover:before:h-56 hover:before:w-57"
+              >
+                <span className="relative z-10">Download a Sample Report</span>
+              </Link>
               </div>
             </div>
           </Container>

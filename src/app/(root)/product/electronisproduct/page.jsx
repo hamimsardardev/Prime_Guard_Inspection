@@ -34,7 +34,7 @@ const Electronics_part = () => {
             <div>
               <Link
                 href="/resourses/samplereport"
-                className="relative h-[50px] w-60 inline-flex items-center justify-center overflow-hidden bg-primary text-white shadow-lg transition-all before:absolute before:h-0 before:w-0 before:rounded-full before:bg-third before:duration-500 before:ease-out hover:before:h-56 hover:before:w-full"
+                className="relative h-[50px] w-58 inline-flex items-center justify-center overflow-hidden bg-primary text-white shadow-lg transition-all before:absolute before:h-0 before:w-0 before:rounded-full before:bg-third before:duration-500 before:ease-out hover:before:h-56 hover:before:w-full"
               >
                 <span className="relative z-10">Download a Sample Report</span>
               </Link>
