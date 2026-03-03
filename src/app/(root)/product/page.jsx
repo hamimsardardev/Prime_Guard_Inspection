@@ -21,22 +21,28 @@ const Product_part = () => {
       {/* ================= Banner Section ================= */}
       <section className="bg-[url('/productbanner.jpg')] bg-cover bg-center">
         <Container>
-          <div className="py-32 md:py-56">
-            <h2 className="text-3xl md:text-4xl text-primary font-semibold leading-tight">
+          <div className="py-32 md:py-56 space-y-4">
+            <h2 className="text-[24px] md:text-[30px] md:text-[36px] text-primary font-semibold leading-[36px]">
               Product & Industries
             </h2>
+            <p className="text-white text-base leading-relaxed max-w-[720px]">
+              We provide inspection, audit, and quality control services across
+              a wide range of products and industries — ensuring compliance,
+              safety, and performance at every stage. From manufacturing to
+              consumer goods, we safeguard your standards.
+            </p>
 
-            <div className="mt-12">
+            <div>
               <button
                 onClick={handleQutationOpen}
                 className="relative h-[50px] w-44 inline-flex items-center justify-center overflow-hidden bg-primary text-white shadow-lg transition-all before:absolute before:h-0 before:w-0 before:rounded-full before:bg-third before:duration-500 before:ease-out hover:before:h-56 hover:before:w-56"
               >
                 <span className="relative z-10">Get Quotation</span>
               </button>
-                <Qutation_form
-                  isOpen={getQuotation}
-                  onClose={handleQutationClose}
-                />
+              <Qutation_form
+                isOpen={getQuotation}
+                onClose={handleQutationClose}
+              />
             </div>
           </div>
         </Container>
@@ -71,14 +77,16 @@ const Product_part = () => {
                   </div>
 
                   {/* Button 1 */}
-                  <button className="w-48 py-3 rounded-full bg-primary border border-primary text-black font-medium hover:bg-transparent hover:text-primary transition">
+                  <button
+                    onClick={handleQutationOpen}
+                    className="w-48 py-3 rounded-full bg-primary border border-primary text-black font-medium hover:bg-transparent hover:text-primary transition"
+                  >
                     GET A QUOTE
                   </button>
-
-                  {/* Button 2 */}
-                  <button className="w-48 py-3 rounded-full bg-transparent border border-primary text-primary font-medium hover:bg-primary hover:text-white transition">
-                    SAMPLE REPORT
-                  </button>
+                  <Qutation_form
+                    isOpen={getQuotation}
+                    onClose={handleQutationClose}
+                  />
                 </div>
               </div>
             </div>
