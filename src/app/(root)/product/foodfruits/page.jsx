@@ -1,9 +1,9 @@
 "use client";
-
 import React, { useState } from "react";
 import Image from "next/image";
 import Container from "@/app/components/common/Container";
 import Sample_part from "@/app/components/Sample_part";
+import Link from "next/link";
 import Qutation_form from "@/app/components/Qutation_form";
 
 const Foodfruits_part = () => {

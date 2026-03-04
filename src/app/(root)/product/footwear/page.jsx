@@ -34,11 +34,13 @@ const Footwear_part = () => {
 
               <div>
                 <Link
-                href="/resourses/samplereport"
-                className="relative h-[50px] w-56 inline-flex items-center justify-center overflow-hidden bg-primary text-white shadow-lg transition-all before:absolute before:h-0 before:w-0 before:rounded-full before:bg-third before:duration-500 before:ease-out hover:before:h-58 hover:before:w-58"
-              >
-                <span className="relative z-10">Download a Sample Report</span>
-              </Link>
+                  href="/resourses/samplereport"
+                  className="relative h-[50px] w-56 inline-flex items-center justify-center overflow-hidden bg-primary text-white shadow-lg transition-all before:absolute before:h-0 before:w-0 before:rounded-full before:bg-third before:duration-500 before:ease-out hover:before:h-58 hover:before:w-58"
+                >
+                  <span className="relative z-10">
+                    Download a Sample Report
+                  </span>
+                </Link>
               </div>
             </div>
           </Container>
@@ -48,11 +50,20 @@ const Footwear_part = () => {
       {/* ================= Content Section ================= */}
       <section className="pt-12 md:pt-20">
         <Container>
-          <div className="flex flex-col lg:flex-row gap-10 mb-16 justify-center items-center">
+          <div className="flex flex-col lg:flex-row gap-10 mb-16">
             <div className="lg:w-4/5">
               <h3 className="text-primary text-3xl md:text-5xl font-medium mb-6">
                 Footwear We Inspect we Serve
               </h3>
+
+              <p className="text-white text-base leading-relaxed max-w-[820px]">
+                We provide comprehensive inspection services for all types of
+                footwear to ensure quality, durability, and compliance with
+                buyer specifications. From raw materials to finished products,
+                we verify workmanship, sizing, labeling, packaging, and
+                performance standards before shipment to protect your brand and
+                customer satisfaction.
+              </p>
             </div>
             <div className="lg:w-1/5">
               <div className="flex justify-center items-center">
@@ -68,7 +79,7 @@ const Footwear_part = () => {
                   {/* Button 1 */}
                   <button
                     onClick={handleQutationOpen}
-                    className="w-48 py-3 rounded-full bg-primary border border-primary text-black font-medium hover:bg-transparent hover:text-primary transition"
+                    className="w-48 py-3 rounded-full text-[18px] bg-primary border border-primary text-black font-medium hover:bg-transparent hover:text-primary transition"
                   >
                     GET A QUOTE
                   </button>
@@ -226,7 +237,7 @@ const Footwear_part = () => {
             </div>
           </div>
         </Container>
-          <Sample_part />
+        <Sample_part />
       </section>
     </div>
   );
