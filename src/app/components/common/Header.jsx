@@ -212,18 +212,23 @@ const Header = () => {
                 </li>
 
                 <li className="relative group py-4 flex items-center gap-1 cursor-pointer hover:text-white transition-colors duration-300">
-                  <Link href="/about">
-                    ABOUT US{" "}
+                  <a>
+                    OUR COMPANY
                     <FiChevronDown
                       size={20}
                       className="inline transition-transform duration-300 group-hover:rotate-180"
                     />
-                  </Link>
+                  </a>
                   <div className="absolute left-0 mt-2 hidden text-primary min-w-[320px] rounded-md bg-gray-800 shadow-lg group-hover:block top-[45px]">
                     <ul className="flex flex-col py-2 gap-2">
                       <li className="px-4 hover:text-white">
-                        <a className="hover:underline" href="#">
-                          Our Management
+                        <a className="hover:underline" href="/ourcompany/about">
+                          About Us
+                        </a>
+                      </li>
+                      <li className="px-4 hover:text-white">
+                        <a className="hover:underline" href="/ourcompany/ourteam">
+                          Our Team
                         </a>
                       </li>
                       {/* <li className="px-4 hover:text-white">
@@ -461,20 +466,25 @@ const Header = () => {
                       className="relative group flex items-center gap-1 cursor-pointer hover:text-white transition-colors duration-300"
                       onClick={handleAboutOpen}
                     >
-                      <Link href="/about">
-                        ABOUT US{" "}
+                      <a>
+                        OUR COMPANY
                         <FiChevronDown
                           size={20}
                           className={`inline transition-transform duration-300 ${aboutOpen ? "rotate-180" : ""}`}
                         />
-                      </Link>
+                      </a>
                       <div
                         className={`${aboutOpen ? "block" : "hidden"} absolute  z-20 top-[20px] left-[-85px] min-w-[300px] rounded-md bg-gray-700 shadow-lg`}
                       >
                         <ul className="flex flex-col py-2 gap-2">
                           <li className="px-4 hover:text-white">
-                            <a className="hover:underline" href="#">
-                              Our Management
+                            <a className="hover:underline" href="/ourcompany/about">
+                              About Us
+                            </a>
+                          </li>
+                          <li className="px-4 hover:text-white">
+                            <a className="hover:underline" href="/ourcompany/ourteam">
+                              Our Team
                             </a>
                           </li>
                           {/* <li className="px-4 hover:text-white">
