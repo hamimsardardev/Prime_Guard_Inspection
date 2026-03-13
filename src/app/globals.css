@@ -6,9 +6,9 @@
 :root {
   --primarycolor: #E7BD63;
   --seconerycolor: #99805C;
-  --thirdcolor: #364153;  
+  --thirdcolor: #364153;
   --radius: 0.625rem;
-  --background: #101828; 
+  --background: #101828;
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
@@ -87,22 +87,25 @@
   --radius-4xl: calc(var(--radius) + 16px);
   --animate-marquee: marquee var(--duration) infinite linear;
   --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
-  
-  
+
+
   @keyframes marquee {
-  from {
-    transform: translateX(0);
+    from {
+      transform: translateX(0);
     }
-  to {
-    transform: translateX(calc(-100% - var(--gap)));
+
+    to {
+      transform: translateX(calc(-100% - var(--gap)));
     }
   }
+
   @keyframes marquee-vertical {
-  from {
-    transform: translateY(0);
+    from {
+      transform: translateY(0);
     }
-  to {
-    transform: translateY(calc(-100% - var(--gap)));
+
+    to {
+      transform: translateY(calc(-100% - var(--gap)));
     }
   }
 }
@@ -147,7 +150,14 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
+
+   .list {
+    @apply flex py-4 items-center gap-1 cursor-pointer hover:text-white transition-colors duration-300;
+  }
+ 
 }
+

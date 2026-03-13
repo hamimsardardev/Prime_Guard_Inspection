@@ -7,6 +7,7 @@ import { FaBars, FaXmark } from "react-icons/fa6";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 const Header = () => {
   const [navbarshow, setNavbarShow] = useState(false);
@@ -30,6 +31,8 @@ const Header = () => {
   function handleAboutOpen() {
     setAboutOpen(!aboutOpen);
   }
+
+  const pathname = usePathname();
   return (
     <>
       <header className="fixed w-full z-[9999]">
@@ -54,10 +57,18 @@ const Header = () => {
                 )}
               </div>
               <ul className="hidden lg:flex items-center gap-8 font-semibold text-primary tracking-wide">
-                <li className="group flex items-center  gap-1 cursor-pointer hover:text-white transition-colors duration-300">
+                <li
+                  className={
+                    pathname === "/" ? "group list text-white" : "list"
+                  }
+                >
                   <Link href="/">HOME</Link>
                 </li>
-                <li className="relative group py-4 flex items-center gap-1 cursor-pointer hover:text-white transition-colors duration-300">
+                <li
+                  className={`relative group ${
+                    pathname === "/service" ? "list text-white" : "list"
+                  }`}
+                >
                   <Link href="/service">
                     SERVICES{" "}
                     <FiChevronDown
@@ -98,7 +109,11 @@ const Header = () => {
                   </div>
                 </li>
 
-                <li className="relative group py-4 flex items-center gap-1 cursor-pointer hover:text-white transition-colors duration-300">
+                <li
+                  className={`relative group ${
+                    pathname === "/product" ? "list text-white" : "list"
+                  }`}
+                >
                   <Link href="/product">
                     PRODUCTS
                     <FiChevronDown
@@ -165,7 +180,11 @@ const Header = () => {
                   </div>
                 </li>
 
-                <li className="relative group py-4 flex items-center gap-1 cursor-pointer hover:text-white transition-colors duration-300">
+                <li
+                  className={`relative group ${
+                    pathname === "/resourses" ? "list text-white" : "list"
+                  }`}
+                >
                   <Link href="/resourses">
                     RESOURCES{" "}
                     <FiChevronDown
@@ -188,7 +207,7 @@ const Header = () => {
                           className="hover:underline"
                           href="/resourses/samplereport"
                         >
-                          Sample Feports
+                          Sample Reports
                         </Link>
                       </li>
                       <li className="px-4 hover:text-white">
@@ -211,7 +230,7 @@ const Header = () => {
                   </div>
                 </li>
 
-                <li className="relative group py-4 flex items-center gap-1 cursor-pointer hover:text-white transition-colors duration-300">
+                <li className="relative group list">
                   <a>
                     OUR COMPANY
                     <FiChevronDown
@@ -227,7 +246,10 @@ const Header = () => {
                         </a>
                       </li>
                       <li className="px-4 hover:text-white">
-                        <a className="hover:underline" href="/ourcompany/ourteam">
+                        <a
+                          className="hover:underline"
+                          href="/ourcompany/ourteam"
+                        >
                           Our Team
                         </a>
                       </li>
@@ -255,7 +277,11 @@ const Header = () => {
                   </div>
                 </li>
 
-                <li className="cursor-pointer py-4 hover:text-white transition-colors duration-300">
+                <li
+                  className={
+                    pathname === "/contact" ? "list text-white" : "list "
+                  }
+                >
                   <Link href="/contact">CONTACT</Link>
                 </li>
               </ul>
@@ -439,7 +465,7 @@ const Header = () => {
                               className="hover:underline"
                               href="/resourses/samplereport"
                             >
-                              Sample Feports
+                              Sample Reports
                             </Link>
                           </li>
                           <li className="px-4 hover:text-white">
@@ -478,12 +504,18 @@ const Header = () => {
                       >
                         <ul className="flex flex-col py-2 gap-2">
                           <li className="px-4 hover:text-white">
-                            <a className="hover:underline" href="/ourcompany/about">
+                            <a
+                              className="hover:underline"
+                              href="/ourcompany/about"
+                            >
                               About Us
                             </a>
                           </li>
                           <li className="px-4 hover:text-white">
-                            <a className="hover:underline" href="/ourcompany/ourteam">
+                            <a
+                              className="hover:underline"
+                              href="/ourcompany/ourteam"
+                            >
                               Our Team
                             </a>
                           </li>

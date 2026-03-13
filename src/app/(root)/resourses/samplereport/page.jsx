@@ -1,13 +1,25 @@
 "use client";
 
 import Container from "@/app/components/common/Container";
-import React from "react";
+import Craftpaper_form from "@/app/components/form/craftpaper_form";
+import Electronics_form from "@/app/components/form/electronics_form";
+import Hardgoods_form from "@/app/components/form/hardgoods_form";
+import Softgoods_form from "@/app/components/form/softgoods_form";
+import React, { useState } from "react";
 import { ImFilePdf } from "react-icons/im";
 
 const Samplereport_part = () => {
+  const [getSampleForm, setgetSampleForm] = useState(false);
+
+  function handleSampleFormOpen() {
+    setgetSampleForm(true);
+  }
+
+  function handleSampleFormClose() {
+    setgetSampleForm(false);
+  }
   return (
     <>
-    
       <section className="bg-[url('/samplebannerimage.png')] bg-cover bg-center">
         <Container>
           <div className="space-y-6 py-[200px] ">
@@ -26,9 +38,15 @@ const Samplereport_part = () => {
                       Electronics Products Inspection
                     </p>
                   </div>
-                  <button className="border border-primary px-3 py-2 rounded-full text-primary font-semibold text-[12px] transition duration-300 hover:text-third hover:bg-primary whitespace-nowrap">
+                  <button 
+                  onClick={handleSampleFormOpen}
+                  className="border border-primary px-3 py-2 rounded-full text-primary font-semibold text-[12px] transition duration-300 hover:text-third hover:bg-primary whitespace-nowrap">
                     Get Report
                   </button>
+                  <Electronics_form
+                    isOpen={getSampleForm}
+                    onClose={handleSampleFormClose}
+                  />
                 </div>
 
                 {/* 2 */}
@@ -41,9 +59,15 @@ const Samplereport_part = () => {
                       Soft Goods/Textile
                     </p>
                   </div>
-                  <button className="border border-primary px-3 py-2 rounded-full text-primary font-semibold text-[12px] transition duration-300 hover:text-third hover:bg-primary whitespace-nowrap">
+                  <button 
+                  onClick={handleSampleFormOpen}
+                  className="border border-primary px-3 py-2 rounded-full text-primary font-semibold text-[12px] transition duration-300 hover:text-third hover:bg-primary whitespace-nowrap">
                     Get Report
                   </button>
+                  <Softgoods_form
+                    isOpen={getSampleForm}
+                    onClose={handleSampleFormClose}
+                  />
                 </div>
 
                 {/* 3 */}
@@ -56,9 +80,15 @@ const Samplereport_part = () => {
                       Hard Goods
                     </p>
                   </div>
-                  <button className="border border-primary px-3 py-2 rounded-full text-primary font-semibold text-[12px] transition duration-300 hover:text-third hover:bg-primary whitespace-nowrap">
+                   <button 
+                  onClick={handleSampleFormOpen}
+                  className="border border-primary px-3 py-2 rounded-full text-primary font-semibold text-[12px] transition duration-300 hover:text-third hover:bg-primary whitespace-nowrap">
                     Get Report
                   </button>
+                  <Hardgoods_form
+                    isOpen={getSampleForm}
+                    onClose={handleSampleFormClose}
+                  />
                 </div>
 
                 {/* 4 */}
@@ -86,9 +116,15 @@ const Samplereport_part = () => {
                       Craft & Paper Goods
                     </p>
                   </div>
-                  <button className="border border-primary px-3 py-2 rounded-full text-primary font-semibold text-[12px] transition duration-300 hover:text-third hover:bg-primary whitespace-nowrap">
+                  <button 
+                  onClick={handleSampleFormOpen}
+                  className="border border-primary px-3 py-2 rounded-full text-primary font-semibold text-[12px] transition duration-300 hover:text-third hover:bg-primary whitespace-nowrap">
                     Get Report
                   </button>
+                  <Craftpaper_form
+                    isOpen={getSampleForm}
+                    onClose={handleSampleFormClose}
+                  />
                 </div>
 
                 {/* 6 */}
