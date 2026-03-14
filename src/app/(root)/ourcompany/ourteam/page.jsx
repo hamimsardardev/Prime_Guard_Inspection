@@ -61,7 +61,7 @@ const OurTeam = () => {
                     </p>
 
                     <p className="text-white text-[18px] leading-relaxed">
-                      Hossain Ali is a distinguished Third-Party Inspection professional and industry leader with 06 years of experience in quality control, supplier auditing, and product inspection, helping global clients ensure compliance with international standards and product quality.
+                      Hossain Ali is a distinguished Third-Party Inspection professional and industry leader with 10 years of experience in quality control, supplier auditing, and product inspection, helping global clients ensure compliance with international standards and product quality.
                     </p>
                   </div>
 

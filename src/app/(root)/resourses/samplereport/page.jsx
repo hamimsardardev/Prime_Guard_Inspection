@@ -3,7 +3,10 @@
 import Container from "@/app/components/common/Container";
 import Craftpaper_form from "@/app/components/form/craftpaper_form";
 import Electronics_form from "@/app/components/form/electronics_form";
+import Food_form from "@/app/components/form/food_form";
+import Footwear_form from "@/app/components/form/footwear_form";
 import Hardgoods_form from "@/app/components/form/hardgoods_form";
+import Product_form from "@/app/components/form/product_form";
 import Softgoods_form from "@/app/components/form/softgoods_form";
 import React, { useState } from "react";
 import { ImFilePdf } from "react-icons/im";
@@ -38,9 +41,10 @@ const Samplereport_part = () => {
                       Electronics Products Inspection
                     </p>
                   </div>
-                  <button 
-                  onClick={handleSampleFormOpen}
-                  className="border border-primary px-3 py-2 rounded-full text-primary font-semibold text-[12px] transition duration-300 hover:text-third hover:bg-primary whitespace-nowrap">
+                  <button
+                    onClick={handleSampleFormOpen}
+                    className="border border-primary px-3 py-2 rounded-full text-primary font-semibold text-[12px] transition duration-300 hover:text-third hover:bg-primary whitespace-nowrap"
+                  >
                     Get Report
                   </button>
                   <Electronics_form
@@ -59,9 +63,10 @@ const Samplereport_part = () => {
                       Soft Goods/Textile
                     </p>
                   </div>
-                  <button 
-                  onClick={handleSampleFormOpen}
-                  className="border border-primary px-3 py-2 rounded-full text-primary font-semibold text-[12px] transition duration-300 hover:text-third hover:bg-primary whitespace-nowrap">
+                  <button
+                    onClick={handleSampleFormOpen}
+                    className="border border-primary px-3 py-2 rounded-full text-primary font-semibold text-[12px] transition duration-300 hover:text-third hover:bg-primary whitespace-nowrap"
+                  >
                     Get Report
                   </button>
                   <Softgoods_form
@@ -80,9 +85,10 @@ const Samplereport_part = () => {
                       Hard Goods
                     </p>
                   </div>
-                   <button 
-                  onClick={handleSampleFormOpen}
-                  className="border border-primary px-3 py-2 rounded-full text-primary font-semibold text-[12px] transition duration-300 hover:text-third hover:bg-primary whitespace-nowrap">
+                  <button
+                    onClick={handleSampleFormOpen}
+                    className="border border-primary px-3 py-2 rounded-full text-primary font-semibold text-[12px] transition duration-300 hover:text-third hover:bg-primary whitespace-nowrap"
+                  >
                     Get Report
                   </button>
                   <Hardgoods_form
@@ -101,9 +107,16 @@ const Samplereport_part = () => {
                       Mechanical Products
                     </p>
                   </div>
-                  <button className="border border-primary px-3 py-2 rounded-full text-primary font-semibold text-[12px] transition duration-300 hover:text-third hover:bg-primary whitespace-nowrap">
+                  <button
+                    onClick={handleSampleFormOpen}
+                    className="border border-primary px-3 py-2 rounded-full text-primary font-semibold text-[12px] transition duration-300 hover:text-third hover:bg-primary whitespace-nowrap"
+                  >
                     Get Report
                   </button>
+                  <Product_form
+                    isOpen={getSampleForm}
+                    onClose={handleSampleFormClose}
+                  />
                 </div>
 
                 {/* 5 */}
@@ -116,9 +129,10 @@ const Samplereport_part = () => {
                       Craft & Paper Goods
                     </p>
                   </div>
-                  <button 
-                  onClick={handleSampleFormOpen}
-                  className="border border-primary px-3 py-2 rounded-full text-primary font-semibold text-[12px] transition duration-300 hover:text-third hover:bg-primary whitespace-nowrap">
+                  <button
+                    onClick={handleSampleFormOpen}
+                    className="border border-primary px-3 py-2 rounded-full text-primary font-semibold text-[12px] transition duration-300 hover:text-third hover:bg-primary whitespace-nowrap"
+                  >
                     Get Report
                   </button>
                   <Craftpaper_form
@@ -137,9 +151,16 @@ const Samplereport_part = () => {
                       Footwear
                     </p>
                   </div>
-                  <button className="border border-primary px-3 py-2 rounded-full text-primary font-semibold text-[12px] transition duration-300 hover:text-third hover:bg-primary whitespace-nowrap">
+                  <button
+                    onClick={handleSampleFormOpen}
+                    className="border border-primary px-3 py-2 rounded-full text-primary font-semibold text-[12px] transition duration-300 hover:text-third hover:bg-primary whitespace-nowrap"
+                  >
                     Get Report
                   </button>
+                  <Footwear_form
+                    isOpen={getSampleForm}
+                    onClose={handleSampleFormClose}
+                  />
                 </div>
 
                 {/* 7 */}
@@ -152,9 +173,16 @@ const Samplereport_part = () => {
                       Food & Fruits
                     </p>
                   </div>
-                  <button className="border border-primary px-3 py-2 rounded-full text-primary font-semibold text-[12px] transition duration-300 hover:text-third hover:bg-primary whitespace-nowrap">
+                  <button
+                    onClick={handleSampleFormOpen}
+                    className="border border-primary px-3 py-2 rounded-full text-primary font-semibold text-[12px] transition duration-300 hover:text-third hover:bg-primary whitespace-nowrap"
+                  >
                     Get Report
                   </button>
+                  <Food_form
+                    isOpen={getSampleForm}
+                    onClose={handleSampleFormClose}
+                  />
                 </div>
               </div>
             </div>
