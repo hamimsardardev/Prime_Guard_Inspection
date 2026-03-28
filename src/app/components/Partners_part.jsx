@@ -3,16 +3,16 @@ import { Marquee } from "@/components/ui/marquee";
 import Container from "./common/Container";
 
 const reviews = [
-  { img: "/partnersone.png" },
-  { img: "/partnerstwo.png" },
-  { img: "/partnersthree.png" },
-  { img: "/partnersfour.png" },
-  { img: "/partnersfive.png" },
-  { img: "/partnerssix.png" },
+  { img: "/partnersone.jpeg" },
+  { img: "/partnerstwo.jpeg" },
+  { img: "/partnersthree.jpeg" },
+  { img: "/partnersfour.jpeg" },
+  { img: "/partnersfive.jpeg" },
+  { img: "/partnerssix.jpeg" },
 ];
 
-const firstRow = reviews.slice(0, reviews.length / 2);
-const secondRow = reviews.slice(reviews.length / 2);
+const firstRow = reviews.slice(0, reviews.length / 1);
+const secondRow = reviews.slice(reviews.length / 1);
 
 const PartnersPart = ({ img }) => {
   return (

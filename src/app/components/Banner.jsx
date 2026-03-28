@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
 import Container from "./common/Container";
-import ButtonWrapper from "./common/Button";
 import { TypeAnimation } from "react-type-animation";
+import Link from "next/link";
 
 const Banner = () => {
   return (
@@ -35,8 +35,11 @@ const Banner = () => {
                   supplier audit services to ensure product quality, reduce
                   supply chain risk, and meet international standards
                 </p>
-
-                <ButtonWrapper />
+                <Link href="/contact">
+                  <button className="before:ease relative h-12 w-40 overflow-hidden border border-white bg-primary font-semibold text-[18px] leading-6 text-white shadow-2xl transition-all before:absolute before:right-0 before:top-0 before:h-12 before:w-6 before:translate-x-12 before:rotate-6 before:bg-white before:opacity-40 before:duration-700 hover:shadow-primary hover:before:-translate-x-40 cursor-pointer">
+                    <span relative="relative z-10">Contact</span>
+                  </button>
+                </Link>
               </div>
             </div>
           </Container>

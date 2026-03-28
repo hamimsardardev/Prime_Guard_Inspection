@@ -246,7 +246,7 @@ const Footer = () => {
 
             {/* Bottom bar */}
             <div className="mt-16 pt-10 border-t text-primary border-gray-800 text-center text-sm">
-              <p>© {new Date().getFullYear()} Prime Global Inspection.</p>
+              <p>© {new Date().getFullYear()} Prime Guard Inspection.</p>
 
               <div className="flex justify-center gap-6 mt-6">
                 <a

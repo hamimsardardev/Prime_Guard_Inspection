@@ -46,7 +46,12 @@ const Header = () => {
             <div className="relative flex items-center justify-between px-2 backdrop-blur-md shadow-md rounded-xl">
               <div>
                 <Link href="/">
-                  <Image src="/logo.jpg" alt="logo" width={150} height={100} />
+                  <Image
+                    src="/headerlogo.jpg"
+                    alt="logo"
+                    width={150}
+                    height={100}
+                  />
                 </Link>
               </div>
               <div className="lg:hidden text-white text-2xl">
@@ -287,11 +292,6 @@ const Header = () => {
 
               {/* RIGHT SIDE */}
               <div className="hidden lg:flex items-center gap-6">
-                <FiSearch
-                  size={22}
-                  className="cursor-pointer text-primary hover:text-white transition"
-                />
-
                 <div className="flex items-center text-primary gap-1 cursor-pointer hover:text-white transition">
                   English <FiChevronDown size={16} />
                 </div>
