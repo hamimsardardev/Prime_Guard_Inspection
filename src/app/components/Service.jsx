@@ -40,34 +40,34 @@ const Service = () => {
                       Product Quality Inspection
                     </Link>
                   </h3>
-                  <ul className="space-y-2 text-primary text-sm md:text-base cursor-pointer">
-                    <li className="group flex items-center gap-2 text-primary hover:text-white">
-                      <span className="text-primary text-lg flex items-center group-hover:text-white">
+                  <ul className="space-y-2 text-primary text-sm md:text-base">
+                    <li className="group flex items-center gap-2 text-primary ">
+                      <span className="text-primary text-lg flex items-center ">
                         <GoDotFill />
                       </span>
                       Pre-production Inspection
                     </li>
-                    <li className="group flex items-center gap-2 text-primary hover:text-white">
-                      <span className="text-primary text-lg flex items-center group-hover:text-white">
+                    <li className="group flex items-center gap-2 text-primary ">
+                      <span className="text-primary text-lg flex items-center ">
                         <GoDotFill />
                       </span>
                       During Production Inspection
                     </li>
-                    <li className="group flex items-center gap-2 text-primary hover:text-white">
-                      <span className="text-primary text-lg flex items-center group-hover:text-white">
+                    <li className="group flex items-center gap-2 text-primary ">
+                      <span className="text-primary text-lg flex items-center ">
                         <GoDotFill />
                       </span>
                       Pre-Shipment Inspection
                     </li>
 
-                    <li className="group flex items-center gap-2 text-primary hover:text-white">
-                      <span className="text-primary text-lg flex items-center group-hover:text-white">
+                    <li className="group flex items-center gap-2 text-primary ">
+                      <span className="text-primary text-lg flex items-center ">
                         <GoDotFill />
                       </span>
                       Sample pick inspection
                     </li>
-                    <li className="group flex items-center gap-2 text-primary hover:text-white">
-                      <span className="text-primary text-lg flex items-center group-hover:text-white">
+                    <li className="group flex items-center gap-2 text-primary ">
+                      <span className="text-primary text-lg flex items-center ">
                         <GoDotFill />
                       </span>
                       Packaging Inspection
@@ -84,33 +84,36 @@ const Service = () => {
                     className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                   />
                 </div>
-                <div className="p-6 md:p-7 flex flex-col flex-grow  cursor-pointer">
-                  <h3 className="text-[24px] md:text-2xl font-bold text-primary mb-4 hover:text-white transition-colors">
-                    <Link className="hover:underline" href="/service/auditservey">
+                <div className="p-6 md:p-7 flex flex-col flex-grow  ">
+                  <h3 className="text-[24px] md:text-2xl font-bold cursor-pointer text-primary mb-4 hover:text-white transition-colors">
+                    <Link
+                      className="hover:underline"
+                      href="/service/auditservey"
+                    >
                       Audit & Survey
                     </Link>
                   </h3>
-                  <ul className="space-y-2 text-primarytext-sm md:text-base flex-grow cursor-pointer">
-                    <li className="group flex items-center gap-2 text-primary hover:text-white">
-                      <span className="text-primary text-lg flex items-center group-hover:text-white">
+                  <ul className="space-y-2 text-primarytext-sm md:text-base flex-grow">
+                    <li className="group flex items-center gap-2 text-primary">
+                      <span className="text-primary text-lg flex items-center">
                         <GoDotFill />
                       </span>
                       Factory Audit
                     </li>
-                    <li className="group flex items-center gap-2 text-primary hover:text-white">
-                      <span className="text-primary text-lg flex items-center group-hover:text-white">
+                    <li className="group flex items-center gap-2 text-primary">
+                      <span className="text-primary text-lg flex items-center">
                         <GoDotFill />
                       </span>
                       Supplier Audit
                     </li>
-                    <li className="group flex items-center gap-2 text-primary hover:text-white">
-                      <span className="text-primary text-lg flex items-center group-hover:text-white">
+                    <li className="group flex items-center gap-2 text-primary">
+                      <span className="text-primary text-lg flex items-center">
                         <GoDotFill />
                       </span>
                       Loading Supervision
                     </li>
-                    <li className="group flex items-center gap-2 text-primary hover:text-white">
-                      <span className="text-primary text-lg flex items-center group-hover:text-white">
+                    <li className="group flex items-center gap-2 text-primary">
+                      <span className="text-primary text-lg flex items-center">
                         <GoDotFill />
                       </span>
                       Survey & Verification
@@ -128,8 +131,8 @@ const Service = () => {
                     className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                   />
                 </div>
-                <div className="p-6 md:p-7 flex flex-col flex-grow cursor-pointer">
-                  <h3 className="text-[24px] md:text-2xl font-bold text-primary mb-4 hover:text-white transition-colors">
+                <div className="p-6 md:p-7 flex flex-col flex-grow ">
+                  <h3 className="text-[24px] md:text-2xl font-bold cursor-pointer text-primary mb-4 hover:text-white transition-colors">
                     <Link
                       className="hover:underline"
                       href="/service/supliermanagement"
@@ -137,9 +140,9 @@ const Service = () => {
                       Supplier Management & Development
                     </Link>
                   </h3>
-                  <ul className="space-y-2 text-primary text-sm md:text-base flex-grow cursor-pointer">
-                    <li className="group flex items-center gap-2 text-primary hover:text-white">
-                      <span className="text-primary text-lg flex items-center group-hover:text-white">
+                  <ul className="space-y-2 text-primary text-sm md:text-base flex-grow ">
+                    <li className="group flex items-center gap-2 text-primary ">
+                      <span className="text-primary text-lg flex items-center ">
                         <GoDotFill />
                       </span>
                       Management Consulting

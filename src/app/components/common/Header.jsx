@@ -69,100 +69,92 @@ const Header = () => {
                 >
                   <Link href="/">HOME</Link>
                 </li>
-                <li className="relative group list">
-                  <a>
+                <li
+                  className={`relative group ${
+                    pathname.startsWith("/ourcompany") ? "text-white" : "list"
+                  }`}
+                >
+                  <Link href="#">
                     OUR COMPANY
                     <FiChevronDown
                       size={20}
                       className="inline transition-transform duration-300 group-hover:rotate-180"
                     />
-                  </a>
-                  <div className="absolute left-0 mt-2 hidden text-primary min-w-[320px] rounded-md bg-gray-800 shadow-lg group-hover:block top-[45px]">
-                    <ul className="flex flex-col py-2 gap-2">
-                      <li className="px-4 hover:text-white">
-                        <a className="hover:underline" href="/ourcompany/about">
-                          About Us
-                        </a>
-                      </li>
-                      <li className="px-4 hover:text-white">
-                        <a
-                          className="hover:underline"
-                          href="/ourcompany/ourteam"
-                        >
-                          Our Team
-                        </a>
-                      </li>
-                      {/* <li className="px-4 hover:text-white">
-                        <a className="hover:underline" href="#">
-                          Inspection System
-                        </a>
-                      </li>
-                      <li className="px-4 hover:text-white">
-                        <a className="hover:underline" href="#">
-                          Career
-                        </a>
-                      </li>
-                      <li className="px-4 hover:text-white">
-                        <a className="hover:underline" href="#">
-                          Customer Feedback
-                        </a>
-                      </li>
-                      <li className="px-4 hover:text-white">
-                        <a className="hover:underline" href="#">
-                          Team Building
-                        </a>
-                      </li> */}
-                    </ul>
+                  </Link>
+
+                  {/* Wrapper to prevent hover gap */}
+                  <div className="absolute left-0 top-full pt-1 hidden group-hover:block">
+                    <div className="min-w-[320px] rounded-md bg-gray-800 shadow-lg text-primary">
+                      <ul className="flex flex-col py-2 gap-2">
+                        <li className="px-4 hover:text-white">
+                          <Link
+                            href="/ourcompany/about"
+                            className="hover:underline"
+                          >
+                            About Us
+                          </Link>
+                        </li>
+                        <li className="px-4 hover:text-white">
+                          <Link
+                            href="/ourcompany/ourteam"
+                            className="hover:underline"
+                          >
+                            Our Team
+                          </Link>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </li>
                 <li
                   className={`relative group ${
-                    pathname === "/service" ? "list text-white" : "list"
+                    pathname.startsWith("/service") ? "text-white" : "list"
                   }`}
                 >
                   <Link href="/service">
-                    SERVICES{" "}
+                    SERVICES
                     <FiChevronDown
                       size={20}
                       className="inline transition-transform duration-300 group-hover:rotate-180"
                     />
                   </Link>
-                  <div
-                    className="absolute left-0 mt-2 hidden text-primary min-w-[420px] rounded-md bg-gray-800 shadow-lg group-hover:block 
-                  top-[45px]"
-                  >
-                    <ul className="flex flex-col py-2 gap-2">
-                      <li className="px-4 hover:text-white">
-                        <Link
-                          className="hover:underline"
-                          href="/service/productinspection"
-                        >
-                          Product Quality Inspection
-                        </Link>
-                      </li>
-                      <li className="px-4 hover:text-white">
-                        <Link
-                          className="hover:underline"
-                          href="/service/auditservey"
-                        >
-                          Audit & Survey
-                        </Link>
-                      </li>
-                      <li className="px-4 hover:text-white">
-                        <Link
-                          className="hover:underline"
-                          href="/service/supliermanagement"
-                        >
-                          Supplier Management & Development
-                        </Link>
-                      </li>
-                    </ul>
+
+                  {/* wrapper for smooth hover */}
+                  <div className="absolute left-0 top-full pt-1 hidden group-hover:block">
+                    <div className="min-w-[350px] rounded-md bg-gray-800 shadow-lg text-primary">
+                      <ul className="flex flex-col py-2 gap-2">
+                        <li className="px-4 hover:text-white">
+                          <Link
+                            className="hover:underline"
+                            href="/service/productinspection"
+                          >
+                            Product Quality Inspection
+                          </Link>
+                        </li>
+                        <li className="px-4 hover:text-white">
+                          <Link
+                            className="hover:underline"
+                            href="/service/auditservey"
+                          >
+                            Audit & Survey
+                          </Link>
+                        </li>
+                        <li className="px-4 hover:text-white">
+                          <Link
+                            className="hover:underline"
+                            href="/service/supliermanagement"
+                          >
+                            Supplier Management & Development
+                          </Link>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </li>
 
                 <li
                   className={`relative group ${
-                    pathname === "/product" ? "list text-white" : "list"
+                    pathname.startsWith("/product") ? "text-white" : "list"
                   }`}
                 >
                   <Link href="/product">
@@ -172,119 +164,130 @@ const Header = () => {
                       className="inline transition-transform duration-300 group-hover:rotate-180"
                     />
                   </Link>
-                  <div className="absolute left-0 mt-2 hidden text-primary min-w-[350px] rounded-md bg-gray-800 shadow-lg group-hover:block top-[45px]">
-                    <ul className="flex flex-col py-2 gap-2">
-                      <li className="px-4 hover:text-white">
-                        <a
-                          className="hover:underline"
-                          href="/product/electronisproduct"
-                        >
-                          Electronics Products Inspection
-                        </a>
-                      </li>
-                      <li className="px-4 hover:text-white">
-                        <a
-                          className="hover:underline"
-                          href="/product/softgoods"
-                        >
-                          Soft Goods/Textile
-                        </a>
-                      </li>
-                      <li className="px-4 hover:text-white">
-                        <a
-                          className="hover:underline"
-                          href="/product/hardgoods"
-                        >
-                          Hard Goods
-                        </a>
-                      </li>
-                      <li className="px-4 hover:text-white">
-                        <a
-                          className="hover:underline"
-                          href="/product/mechanicalproduct"
-                        >
-                          Mechanical Products
-                        </a>
-                      </li>
-                      <li className="px-4 hover:text-white">
-                        <a
-                          className="hover:underline"
-                          href="/product/craftpaper"
-                        >
-                          Craft & Paper Goods
-                        </a>
-                      </li>
-                      <li className="px-4 hover:text-white">
-                        <a className="hover:underline" href="/product/footwear">
-                          Footwear
-                        </a>
-                      </li>
-                      <li className="px-4 hover:text-white">
-                        <a
-                          className="hover:underline"
-                          href="/product/foodfruits"
-                        >
-                          Food & Fruits
-                        </a>
-                      </li>
-                    </ul>
+
+                  {/* wrapper for smooth hover */}
+                  <div className="absolute left-0 top-full pt-1 hidden group-hover:block">
+                    <div className="min-w-[350px] rounded-md bg-gray-800 shadow-lg text-primary">
+                      <ul className="flex flex-col py-2 gap-2">
+                        <li className="px-4 hover:text-white">
+                          <Link
+                            href="/product/electronisproduct"
+                            className="hover:underline"
+                          >
+                            Electronics Products Inspection
+                          </Link>
+                        </li>
+                        <li className="px-4 hover:text-white">
+                          <Link
+                            href="/product/softgoods"
+                            className="hover:underline"
+                          >
+                            Soft Goods/Textile
+                          </Link>
+                        </li>
+                        <li className="px-4 hover:text-white">
+                          <Link
+                            href="/product/hardgoods"
+                            className="hover:underline"
+                          >
+                            Hard Goods
+                          </Link>
+                        </li>
+                        <li className="px-4 hover:text-white">
+                          <Link
+                            href="/product/mechanicalproduct"
+                            className="hover:underline"
+                          >
+                            Mechanical Products
+                          </Link>
+                        </li>
+                        <li className="px-4 hover:text-white">
+                          <Link
+                            href="/product/craftpaper"
+                            className="hover:underline"
+                          >
+                            Craft & Paper Goods
+                          </Link>
+                        </li>
+                        <li className="px-4 hover:text-white">
+                          <Link
+                            href="/product/footwear"
+                            className="hover:underline"
+                          >
+                            Footwear
+                          </Link>
+                        </li>
+                        <li className="px-4 hover:text-white">
+                          <Link
+                            href="/product/foodfruits"
+                            className="hover:underline"
+                          >
+                            Food & Fruits
+                          </Link>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </li>
 
                 <li
                   className={`relative group ${
-                    pathname === "/resourses" ? "list text-white" : "list"
+                    pathname.startsWith("/resourses") ? "text-white" : "list"
                   }`}
                 >
                   <Link href="/resourses">
-                    RESOURCES{" "}
+                    RESOURCES
                     <FiChevronDown
                       size={20}
                       className="inline transition-transform duration-300 group-hover:rotate-180"
                     />
                   </Link>
-                  <div className="absolute left-0 mt-2 hidden text-primary min-w-[220px] rounded-md bg-gray-800 shadow-lg group-hover:block top-[45px]">
-                    <ul className="flex flex-col py-2 gap-2">
-                      <li className="px-4 hover:text-white">
-                        <Link
-                          className="hover:underline"
-                          href="/resourses/blog"
-                        >
-                          Blog
-                        </Link>
-                      </li>
-                      <li className="px-4 hover:text-white">
-                        <Link
-                          className="hover:underline"
-                          href="/resourses/samplereport"
-                        >
-                          Sample Reports
-                        </Link>
-                      </li>
-                      <li className="px-4 hover:text-white">
-                        <Link
-                          className="hover:underline"
-                          href="/resourses/factoryaudit"
-                        >
-                          Factory Audit
-                        </Link>
-                      </li>
-                      <li className="px-4 hover:text-white">
-                        <Link
-                          className="hover:underline"
-                          href="/resourses/faqs"
-                        >
-                          FAQs
-                        </Link>
-                      </li>
-                    </ul>
+
+                  {/* smooth dropdown wrapper */}
+                  <div className="absolute left-0 top-full pt-1 hidden group-hover:block">
+                    <div className="min-w-[220px] rounded-md bg-gray-800 shadow-lg text-primary">
+                      <ul className="flex flex-col py-2 gap-2">
+                        <li className="px-4 hover:text-white">
+                          <Link
+                            href="/resourses/blog"
+                            className="hover:underline"
+                          >
+                            Blog
+                          </Link>
+                        </li>
+                        <li className="px-4 hover:text-white">
+                          <Link
+                            href="/resourses/samplereport"
+                            className="hover:underline"
+                          >
+                            Sample Reports
+                          </Link>
+                        </li>
+                        <li className="px-4 hover:text-white">
+                          <Link
+                            href="/resourses/factoryaudit"
+                            className="hover:underline"
+                          >
+                            Factory Audit
+                          </Link>
+                        </li>
+                        <li className="px-4 hover:text-white">
+                          <Link
+                            href="/resourses/faqs"
+                            className="hover:underline"
+                          >
+                            FAQs
+                          </Link>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </li>
 
                 <li
-                  className={
-                    pathname === "/contact" ? "list text-white" : "list "
-                  }
+                  className={`list ${
+                    pathname.startsWith("/contact") ? "text-white" : ""
+                  }`}
                 >
                   <Link href="/contact">CONTACT</Link>
                 </li>

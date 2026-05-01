@@ -50,50 +50,19 @@ const Footer = () => {
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
               {/* Column 1 */}
               <div>
-                <h4 className="text-primary font-semibold mb-5">Learn More</h4>
-                <ul className="space-y-3 text-white text-sm">
-                  <li>
-                    <Link
-                      href="/why-hqts"
-                      className="hover:text-primary transition-colors"
-                    >
-                      Why use PGI?
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/inspections"
-                      className="hover:text-primary transition-colors"
-                    >
-                      Which Inspections to choose?
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/audits"
-                      className="hover:text-primary transition-colors"
-                    >
-                      Which Audits to choose?
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/service-locations"
-                      className="hover:text-primary transition-colors"
-                    >
-                      Service Locations
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-
-              {/* Column 2 */}
-              <div>
                 <h4 className="text-primary font-semibold mb-5">Service</h4>
                 <ul className="space-y-3 text-white text-sm">
                   <li>
                     <Link
-                      href="/aql"
+                      href="/service/auditservey"
+                      className="hover:text-primary transition-colors"
+                    >
+                      Audit & Survey Services
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/service/productinspection"
                       className="hover:text-primary transition-colors"
                     >
                       Product Quality Control Inspection
@@ -101,38 +70,22 @@ const Footer = () => {
                   </li>
                   <li>
                     <Link
-                      href="/qc-india"
+                      href="/service/supliermanagement"
                       className="hover:text-primary transition-colors"
                     >
-                      Quality Control in India
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/qc-china"
-                      className="hover:text-primary transition-colors"
-                    >
-                      Quality Control in China
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/qc-bangladesh"
-                      className="hover:text-primary transition-colors"
-                    >
-                      Quality Control in Bangladesh
+                      Supplier Management & Development
                     </Link>
                   </li>
                 </ul>
               </div>
 
-              {/* Column 3 */}
+              {/* Column 2 */}
               <div>
                 <h4 className="text-primary font-semibold mb-5">Products</h4>
                 <ul className="space-y-3 text-white text-sm">
                   <li>
                     <Link
-                      href="/manufacturing-audit"
+                      href="/product/electronisproduct"
                       className="hover:text-primary transition-colors"
                     >
                       Electronics Products Inspection
@@ -140,7 +93,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <Link
-                      href="/social-compliance"
+                      href="/product/softgoods"
                       className="hover:text-primary transition-colors"
                     >
                       Soft Goods
@@ -148,7 +101,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <Link
-                      href="/building-safety"
+                      href="/product/hardgoods"
                       className="hover:text-primary transition-colors"
                     >
                       Hard Goods
@@ -156,7 +109,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <Link
-                      href="/environmental-audit"
+                      href="/product/mechanicalproduct"
                       className="hover:text-primary transition-colors"
                     >
                       Mechanical Products
@@ -164,18 +117,26 @@ const Footer = () => {
                   </li>
                   <li>
                     <Link
-                      href="/energy-audit"
+                      href="/product/craftpaper"
                       className="hover:text-primary transition-colors"
                     >
-                      Food
+                      Craft & Paper Goods
                     </Link>
                   </li>
                   <li>
                     <Link
-                      href="/food-safety-audit"
+                      href="/product/footwear"
                       className="hover:text-primary transition-colors"
                     >
-                      Agriculture products
+                      Footwear
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/product/foodfruits"
+                      className="hover:text-primary transition-colors"
+                    >
+                      Food & Fruits
                     </Link>
                   </li>
                 </ul>
@@ -186,47 +147,40 @@ const Footer = () => {
                 <ul className="space-y-3 text-white text-sm">
                   <li>
                     <Link
-                      href="/company"
-                      className="hover:text-primaryprimary transition-colors"
+                      href="/ourcompany/about"
+                      className="hover:text-primary transition-colors"
                     >
                       Our Company
                     </Link>
                   </li>
+                  
                   <li>
                     <Link
-                      href="/compliance-integrity"
-                      className="hover:text-primaryprimary transition-colors"
-                    >
-                      Compliance and Integrity
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/accreditations"
+                      href="/resourses/faqs"
                       className="hover:text-primary transition-colors"
                     >
-                      Accreditations and Certifications
+                      Faqs
                     </Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link
                       href="/testimonials"
                       className="hover:text-primary transition-colors"
                     >
                       Testimonials
                     </Link>
-                  </li>
-                  <li>
+                  </li> */}
+                  {/* <li>
                     <Link
                       href="/careers"
                       className="hover:text-primary transition-colors"
                     >
                       Careers
                     </Link>
-                  </li>
+                  </li> */}
                   <li>
                     <Link
-                      href="/terms"
+                      href="/terms-Condition"
                       className="hover:text-primary transition-colors"
                     >
                       Terms and Conditions
@@ -234,11 +188,29 @@ const Footer = () => {
                   </li>
                   <li>
                     <Link
-                      href="/privacy"
+                      href="/privacy-policy"
                       className="hover:text-primary transition-colors"
                     >
                       Privacy Policy
                     </Link>
+                  </li>
+                </ul>
+              </div>
+              {/* Column 3 */}
+              <div>
+                <h4 className="text-primary font-semibold mb-5">Contact</h4>
+                <ul className="space-y-3 text-white text-sm ">
+                  <li className="hover:underline">
+                    E-Mail: service@pgi-intl.com
+                  </li>
+                  <li className="hover:underline">
+                    Tel: +880 1642-401262 （Mr. Hossain）
+                  </li>
+                  <li className="hover:underline">
+                    WhatsApp: +880 1642-401262
+                  </li>
+                  <li className="hover:underline">
+                    Complaint Mailbox: compliance@pgi-intl.com
                   </li>
                 </ul>
               </div>
@@ -250,7 +222,7 @@ const Footer = () => {
 
               <div className="flex justify-center gap-6 mt-6">
                 <a
-                  href="https://facebook.com"
+                  href="https://www.facebook.com/hossain.ali.680713"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Facebook"
@@ -278,7 +250,7 @@ const Footer = () => {
                   </svg>
                 </a>
                 <a
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/in/hossain-ali-pgi-intl/"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="LinkedIn"

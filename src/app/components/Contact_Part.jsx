@@ -83,15 +83,15 @@ const Contact_Part = () => {
                     transition={{ type: "spring", stiffness: 300 }}
                     className="w-auto md:w-[300px] lg:w-[390px] border-2 border-primary"
                   >
-                    <div className="flex gap-[13px] py-3 md:py-4 lg:py-6  pl-3 md:pl-4 lg:pl-6 items-center hover:shadow-xl/20">
-                      <div className="group py-3 md:py-4 lg:py-[20px] px-3 md:px-4 lg:px-[20px] border-2 border-primary inline-block rounded-[6px]">
-                        <MdOutlineMarkEmailUnread className="h-[32px] w-[32px] text-primary" />
+                    <div className="flex gap-3.5 py-3 md:py-4 lg:py-6  pl-3 md:pl-4 lg:pl-6 items-center hover:shadow-xl/20">
+                      <div className="group py-3 md:py-4 lg:py-5 px-3 md:px-4 lg:px-5 border-2 border-primary inline-block rounded-[6px]">
+                        <MdOutlineMarkEmailUnread className="h-8 w-8 text-primary" />
                       </div>
                       <div className="">
-                        <p className="font-roboto text-[18px] font-normal leading-[20px] mb-1 text-primary">
+                        <p className="font-roboto text-[18px] font-normal leading-5 mb-1 text-primary">
                           Email:
                         </p>
-                        <h5 className="break-all sm:break-normal font-roboto text-[16px] font-medium leading-[24px] text-white">
+                        <h5 className="break-all sm:break-normal font-roboto text-[16px] font-medium leading-6 text-white">
                           hossain@pgi-intl.com | service@pgi-intl.com
                         </h5>
                       </div>
@@ -105,15 +105,15 @@ const Contact_Part = () => {
                     transition={{ type: "spring", stiffness: 300 }}
                     className="w-auto md:w-[300px] lg:w-[390px] border-2 border-primary"
                   >
-                    <div className="flex gap-[13px] py-3 md:py-4 lg:py-6  pl-3 md:pl-4 lg:pl-6 items-center hover:shadow-xl/20">
-                      <div className="group py-3 md:py-4 lg:py-[20px] px-3 md:px-4 lg:px-[20px] border-2 border-primary inline-block rounded-[6px]">
-                        <MdAddCall className="h-[32px] w-[32px] text-primary" />
+                    <div className="flex gap-3.5 py-3 md:py-4 lg:py-6  pl-3 md:pl-4 lg:pl-6 items-center hover:shadow-xl/20">
+                      <div className="group py-3 md:py-4 lg:py-5 px-3 md:px-4 lg:px-5 border-2 border-primary inline-block rounded-[6px]">
+                        <MdAddCall className="h-8 w-8 text-primary" />
                       </div>
                       <div>
-                        <p className="font-roboto text-[18px] font-normal leading-[20px] mb-1 text-primary">
+                        <p className="font-roboto text-[18px] font-normal leading-5 mb-1 text-primary">
                           Contact:
                         </p>
-                        <h5 className="font-roboto text-[16px] font-medium leading-[24px] text-white">
+                        <h5 className="font-roboto text-[16px] font-medium leading-6 text-white">
                           +8801642-401262
                         </h5>
                       </div>
@@ -226,9 +226,9 @@ const Contact_Part = () => {
 
                     <motion.div
                       variants={fadeInUp}
-                      className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6"
+                      className=" mb-6"
                     >
-                      <div className="w-full">
+                      {/* <div className="w-full">
                         <label className="block text-primary font-medium mb-1">
                           Budget*
                         </label>
@@ -239,12 +239,12 @@ const Contact_Part = () => {
                             className="w-full font-roboto text-[16px] text-regular px-4 py-2 border text-white border-primarytwo rounded-lg focus:outline-none focus:border-primary"
                           />
                         </div>
-                      </div>
+                      </div> */}
                       <div className="w-full">
                         <label className="block text-primary font-medium mb-1">
                           Subject*
                         </label>
-                        <div className="group rounded-[8px] bg-gray-900 hover:bg-gray-900/50 transition duration-300">
+                        <div className="group rounded-2 bg-gray-900 hover:bg-gray-900/50 transition duration-300">
                           <input
                             type="text"
                             placeholder="Enter your Subject"
