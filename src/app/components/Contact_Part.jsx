@@ -202,7 +202,7 @@ const Contact_Part = () => {
                       <label className="block text-primary font-medium mb-1">
                         Gmail*
                       </label>
-                      <div className="group rounded-[8px] bg-gray-900 hover:bg-gray-900/50 transition duration-300">
+                      <div className="group rounded-xl bg-gray-900 hover:bg-gray-900/50 transition duration-300">
                         <input
                           type="email"
                           placeholder="Enter your gmail"
@@ -215,41 +215,40 @@ const Contact_Part = () => {
                       <label className="lg:block text-primary font-medium mb-1">
                         Location*
                       </label>
-                      <div className="group rounded-[8px] bg-gray-900 hover:bg-gray-900/50 transition duration-300">
-                        <input
-                          type="text"
-                          placeholder="Enter your location"
-                          className="w-full font-roboto text-[16px] text-regular px-4 py-2 border text-white border-primarytwo rounded-lg focus:outline-none focus:border-primary"
-                        />
+                      <div className="group rounded-xl bg-gray-900 hover:bg-gray-900/50 transition duration-300">
+                        <select
+                          required
+                          className="w-full font-roboto text-[16px] text-regular px-4 py-2 border  bg-gray-900 text-white border-primarytwo rounded-lg focus:outline-none focus:border-primary"
+                        >
+                          <option value="SS">Select Location</option>
+                          <option value="BD">Bangladesh</option>
+                          <option value="CN">China</option>
+                          <option value="IN">India</option>
+                          <option value="PK">Pakistan</option>
+                          <option value="VN">Vietnam</option>
+                        </select>
                       </div>
                     </motion.div>
 
-                    <motion.div
-                      variants={fadeInUp}
-                      className=" mb-6"
-                    >
-                      {/* <div className="w-full">
-                        <label className="block text-primary font-medium mb-1">
-                          Budget*
-                        </label>
-                        <div className="group rounded-[8px] bg-gray-900 hover:bg-gray-900/50 transition duration-300">
-                          <input
-                            type="text"
-                            placeholder="Enter your Budget"
-                            className="w-full font-roboto text-[16px] text-regular px-4 py-2 border text-white border-primarytwo rounded-lg focus:outline-none focus:border-primary"
-                          />
-                        </div>
-                      </div> */}
+                    <motion.div variants={fadeInUp} className=" mb-6">
                       <div className="w-full">
                         <label className="block text-primary font-medium mb-1">
-                          Subject*
+                          Service*
                         </label>
-                        <div className="group rounded-2 bg-gray-900 hover:bg-gray-900/50 transition duration-300">
-                          <input
-                            type="text"
-                            placeholder="Enter your Subject"
-                            className="w-full font-roboto text-[16px] text-regular px-4 py-2 border text-white border-primarytwo rounded-lg focus:outline-none focus:border-primary"
-                          />
+                        <div className="group rounded-lg bg-gray-900 hover:bg-gray-900/50 transition duration-300">
+                          <select
+                            required
+                            className="w-full font-roboto text-[16px] text-regular px-4 py-2 border  bg-gray-900 text-white border-primarytwo rounded-lg focus:outline-none focus:border-primary"
+                          >
+                            <option value="SS">Select Service</option>
+                            <option value="PQI">
+                              Product Quality Inspection
+                            </option>
+                            <option value="AS">Audit & Survey</option>
+                            <option value="SMD">
+                              Supplier Management & Development
+                            </option>
+                          </select>
                         </div>
                       </div>
                     </motion.div>
@@ -258,7 +257,7 @@ const Contact_Part = () => {
                       <label className="block text-primary font-medium mb-1">
                         Message*
                       </label>
-                      <div className="group rounded-[8px] bg-gray-900 hover:bg-gray-900/50 transition duration-300">
+                      <div className="group rounded-xl bg-gray-900 hover:bg-gray-900/50 transition duration-300">
                         <textarea
                           placeholder="Write your message..."
                           className="w-full font-roboto text-[16px] text-regular px-4 py-2 border text-white border-primarytwo rounded-lg focus:outline-none focus:border-primary"

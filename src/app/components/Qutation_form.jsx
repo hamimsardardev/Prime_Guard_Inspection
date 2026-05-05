@@ -22,7 +22,7 @@ const Qutation_form = ({ isOpen, onClose }) => {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">
       {/* Modal Box */}
-      <div className="flex flex-col h-[600px] w-[620px] bg-white rounded-[20px]">
+      <div className="flex flex-col h-[600px] w-155 bg-white rounded-[20px]">
         {/* Header */}
         <div className="flex items-center justify-between px-6 py-5 border-b dark:border-gray-800">
           <div>
@@ -61,6 +61,31 @@ const Qutation_form = ({ isOpen, onClose }) => {
             <div>
               <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5">
                 Last name <span className="text-red-500">*</span>
+              </label>
+              <input
+                type="text"
+                required
+                className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-primary outline-none transition"
+                placeholder="Doe"
+              />
+            </div>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <div>
+              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5">
+                Position <span className="text-red-500">*</span>
+              </label>
+              <input
+                type="text"
+                required
+                className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-primary outline-none transition"
+                placeholder="John"
+              />
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5">
+                Company name <span className="text-red-500">*</span>
               </label>
               <input
                 type="text"
