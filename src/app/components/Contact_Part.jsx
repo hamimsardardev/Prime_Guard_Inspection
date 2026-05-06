@@ -128,7 +128,12 @@ const Contact_Part = () => {
                       transition={{ type: "spring", stiffness: 200 }}
                       className="py-[15px] px-[15px] text-primary bg-[#101635] rounded-full  hover:bg-[#193CB8] hover:text-primary hover:rounded-full"
                     >
-                      <a href="">
+                      <a
+                        href="https://www.facebook.com/hossain.ali.680713"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Facebook"
+                      >
                         <FaFacebookF className="h-[20px] w-[20px]" />
                       </a>
                     </motion.li>
@@ -137,7 +142,12 @@ const Contact_Part = () => {
                       transition={{ type: "spring", stiffness: 200 }}
                       className="py-[15px] px-[15px] text-primary bg-[#101635] rounded-full  hover:bg-[#007B3D] hover:text-primary hover:rounded-full"
                     >
-                      <a href="">
+                      <a
+                        href=""
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Facebook"
+                      >
                         <FaDribbble className="h-[20px] w-[20px]" />
                       </a>
                     </motion.li>
@@ -155,17 +165,13 @@ const Contact_Part = () => {
                       transition={{ type: "spring", stiffness: 200 }}
                       className="py-[15px] px-[15px] text-primary bg-[#101635] rounded-full  hover:bg-[#0A66C2] hover:text-primary hover:rounded-full"
                     >
-                      <a href="">
+                      <a
+                        href="https://www.linkedin.com/in/hossain-ali-pgi-intl/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Facebook"
+                      >
                         <FaLinkedin className="h-[20px] w-[20px]" />
-                      </a>
-                    </motion.li>
-                    <motion.li
-                      whileHover={{ scale: 1.15, rotate: 5 }}
-                      transition={{ type: "spring", stiffness: 200 }}
-                      className="py-[15px] px-[15px] text-primary bg-[#101635] rounded-full  hover:bg-[#2453FE] hover:text-primary hover:rounded-full"
-                    >
-                      <a href="">
-                        <FaBehance className="h-[20px] w-[20px]" />
                       </a>
                     </motion.li>
                   </ul>

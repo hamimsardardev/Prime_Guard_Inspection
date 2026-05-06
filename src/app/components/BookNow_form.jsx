@@ -21,57 +21,56 @@ const BookNow_form = ({ isOpen, onClose }) => {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">
-      
       {/* Modal Box */}
-      <div className="flex flex-col h-[600px] w-[620px] bg-white rounded-[20px]">
-          {/* Header */}
-          <div className="flex items-center justify-between px-6 py-5 border-b dark:border-gray-800">
-            <div>
-              <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
-               Book Now
-              </h2>
-              <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
-                We'll respond within 12 hours.
-              </p>
-            </div>
-
-            <button
-              onClick={onClose}
-              className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-              aria-label="Close"
-            >
-              <X className="w-6 h-6 text-gray-700 dark:text-gray-300" />
-            </button>
+      <div className="flex flex-col h-150 w-155 bg-white rounded-4xl">
+        {/* Header */}
+        <div className="flex items-center justify-between px-6 py-5 border-b dark:border-gray-800">
+          <div>
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
+              Book Now
+            </h2>
+            <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
+              We'll respond within 12 hours.
+            </p>
           </div>
 
-          {/* Form content - scrollable */}
-          <form className="flex-1 px-6 py-6 overflow-y-auto space-y-6">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-              <div>
-                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5">
-                  First name <span className="text-red-500">*</span>
-                </label>
-                <input
-                  type="text"
-                  required
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-primary outline-none transition"
-                  placeholder="John"
-                />
-              </div>
+          <button
+            onClick={onClose}
+            className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+            aria-label="Close"
+          >
+            <X className="w-6 h-6 text-gray-700 dark:text-gray-300" />
+          </button>
+        </div>
 
-              <div>
-                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5">
-                  Last name <span className="text-red-500">*</span>
-                </label>
-                <input
-                  type="text"
-                  required
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-primary outline-none transition"
-                  placeholder="Doe"
-                />
-              </div>
+        {/* Form content - scrollable */}
+        <form className="flex-1 px-6 py-6 overflow-y-auto space-y-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <div>
+              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5">
+                First name <span className="text-red-500">*</span>
+              </label>
+              <input
+                type="text"
+                required
+                className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-primary outline-none transition"
+                placeholder="John"
+              />
             </div>
 
+            <div>
+              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5">
+                Last name <span className="text-red-500">*</span>
+              </label>
+              <input
+                type="text"
+                required
+                className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-primary outline-none transition"
+                placeholder="Doe"
+              />
+            </div>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             <div>
               <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5">
                 Company name <span className="text-red-500">*</span>
@@ -97,91 +96,91 @@ const BookNow_form = ({ isOpen, onClose }) => {
                 <option value="CN">China</option>
                 <option value="IN">India</option>
                 <option value="PK">Pakistan</option>
-                <option value="VN">Vietnam</option>                
+                <option value="VN">Vietnam</option>
               </select>
             </div>
-
-            <div className="grid grid-cols-[100px,1fr] gap-4">
-              <div>
-                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5">
-                  Code
-                </label>
-                <select
-                  defaultValue="+880"
-                  className="w-full px-3 py-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-primary focus:border-primary outline-none transition"
-                >
-                  <option>+880</option>
-                  <option>+86</option>
-                  <option>+91</option>
-                  <option>+65</option>
-                  <option>+66</option>
-                </select>
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5">
-                  Phone number <span className="text-red-500">*</span>
-                </label>
-                <input
-                  type="tel"
-                  required
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-primary outline-none transition"
-                  placeholder="1234567890"
-                />
-              </div>
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5">
-                Email <span className="text-red-500">*</span>
-              </label>
-              <input
-                type="email"
-                required
-                className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-primary outline-none transition"
-                placeholder="example@company.com"
-              />
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5">
-                Service location
-              </label>
-              <select className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary outline-none transition">
-                <option value="">Select location</option>
-                <option>China</option>
-                <option>Southeast Asia</option>
-                <option>Europe</option>
-                <option>Bangladesh</option>
-              </select>
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5">
-                Message <span className="text-red-500">*</span>
-              </label>
-              <textarea
-                required
-                rows={5}
-                className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-primary outline-none transition resize-none"
-                placeholder="Tell us about your inspection / quotation needs..."
-              />
-            </div>
-
-            <button
-              type="submit"
-              className="px-6 py-4 border-2 border-third text-white py-4 bg-third hover:bg-gray-600 font-semibold rounded-full transition duration-300 shadow-md flex items-center justify-center gap-2 text-lg cursor-pointer"
-            >
-              Submit →
-            </button>
-          </form>
-
-          {/* Optional footer */}
-          <div className="px-6 py-4 border-t dark:border-gray-800 text-center text-sm text-gray-500 dark:text-gray-400">
-            We usually reply within 12 hours
           </div>
 
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <div>
+              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5">
+                Code
+              </label>
+              <select
+                defaultValue="+880"
+                className="w-full px-3 py-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-primary focus:border-primary outline-none transition"
+              >
+                <option>+880</option>
+                <option>+86</option>
+                <option>+91</option>
+                <option>+65</option>
+                <option>+66</option>
+              </select>
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5">
+                Phone number <span className="text-red-500">*</span>
+              </label>
+              <input
+                type="tel"
+                required
+                className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-primary outline-none transition"
+                placeholder="1234567890"
+              />
+            </div>
+          </div>
+
+          <div>
+            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5">
+              Email <span className="text-red-500">*</span>
+            </label>
+            <input
+              type="email"
+              required
+              className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-primary outline-none transition"
+              placeholder="example@company.com"
+            />
+          </div>
+
+          <div>
+            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5">
+              Service
+            </label>
+            <select className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary outline-none transition">
+              <option value="">Select Service</option>
+              <option>Product Quality Inspection</option>
+              <option>Audit & Survey</option>
+              <option>Supplier Management & Development</option>
+            </select>
+          </div>
+
+          <div>
+            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5">
+              Message <span className="text-red-500">*</span>
+            </label>
+            <textarea
+              required
+              rows={5}
+              className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-primary outline-none transition resize-none"
+              placeholder="Tell us about your inspection / quotation needs..."
+            />
+          </div>
+
+          <button
+            type="submit"
+            className="px-6 py-2 border-2 border-third  text-third hover:text-white bg-primary hover:bg-gray-600 font-semibold rounded-full transition duration-300 shadow-md flex items-center justify-center gap-2 text-lg cursor-pointer"
+          >
+            Submit →
+          </button>
+        </form>
+
+        {/* Optional footer */}
+        <div className="px-6 py-4 border-t dark:border-gray-800 text-center text-sm text-gray-500 dark:text-gray-400">
+          We usually reply within 12 hours
+        </div>
       </div>
     </div>
+    
   );
 };
 

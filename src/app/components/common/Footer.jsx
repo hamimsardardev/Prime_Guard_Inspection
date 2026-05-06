@@ -36,7 +36,7 @@ const Footer = () => {
                   />
                   <button
                     type="submit"
-                    className="px-8 py-3 border border-primary bg-transparent hover:bg-teal-950 text-white hover:text-primary cursor-pointer font-medium rounded-lg transition-colors duration-200 whitespace-nowrap"
+                    className="px-8 py-3 border border-primary bg-transparent hover:bg-primary text-primary hover:text-third cursor-pointer font-medium rounded-lg transition-colors duration-200 whitespace-nowrap"
                   >
                     SUBMIT
                   </button>

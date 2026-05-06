@@ -22,7 +22,7 @@ const Qutation_form = ({ isOpen, onClose }) => {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">
       {/* Modal Box */}
-      <div className="flex flex-col h-[600px] w-155 bg-white rounded-[20px]">
+      <div className="flex flex-col h-150 w-155 bg-white rounded-4xl">
         {/* Header */}
         <div className="flex items-center justify-between px-6 py-5 border-b dark:border-gray-800">
           <div>
@@ -44,7 +44,7 @@ const Qutation_form = ({ isOpen, onClose }) => {
         </div>
 
         {/* Form content - scrollable */}
-        <form className="flex-1 px-6 py-6 overflow-y-auto space-y-6">
+         <form className="flex-1 px-6 py-6 overflow-y-auto space-y-6">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             <div>
               <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5">
@@ -57,7 +57,6 @@ const Qutation_form = ({ isOpen, onClose }) => {
                 placeholder="John"
               />
             </div>
-
             <div>
               <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5">
                 Last name <span className="text-red-500">*</span>
@@ -79,10 +78,9 @@ const Qutation_form = ({ isOpen, onClose }) => {
                 type="text"
                 required
                 className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-primary outline-none transition"
-                placeholder="John"
+                placeholder="Position"
               />
             </div>
-
             <div>
               <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5">
                 Company name <span className="text-red-500">*</span>
@@ -91,23 +89,10 @@ const Qutation_form = ({ isOpen, onClose }) => {
                 type="text"
                 required
                 className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-primary outline-none transition"
-                placeholder="Doe"
+                placeholder="Company name"
               />
             </div>
           </div>
-
-          <div>
-            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5">
-              Company name <span className="text-red-500">*</span>
-            </label>
-            <input
-              type="text"
-              required
-              className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-primary outline-none transition"
-              placeholder="Your Company Ltd"
-            />
-          </div>
-
           <div>
             <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5">
               Company country <span className="text-red-500">*</span>
@@ -124,8 +109,7 @@ const Qutation_form = ({ isOpen, onClose }) => {
               <option value="VN">Vietnam</option>
             </select>
           </div>
-
-          <div className="grid grid-cols-[100px,1fr] gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             <div>
               <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5">
                 Code
@@ -134,11 +118,8 @@ const Qutation_form = ({ isOpen, onClose }) => {
                 defaultValue="+880"
                 className="w-full px-3 py-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-primary focus:border-primary outline-none transition"
               >
-                <option>+880</option>
-                <option>+86</option>
-                <option>+91</option>
-                <option>+65</option>
-                <option>+66</option>
+                <option>+880</option> <option>+86</option> <option>+91</option>
+                <option>+65</option> <option>+66</option>
               </select>
             </div>
             <div>
@@ -153,7 +134,6 @@ const Qutation_form = ({ isOpen, onClose }) => {
               />
             </div>
           </div>
-
           <div>
             <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5">
               Email <span className="text-red-500">*</span>
@@ -165,20 +145,29 @@ const Qutation_form = ({ isOpen, onClose }) => {
               placeholder="example@company.com"
             />
           </div>
-
-          <div>
-            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5">
-              Service location
-            </label>
-            <select className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary outline-none transition">
-              <option value="">Select location</option>
-              <option>China</option>
-              <option>Southeast Asia</option>
-              <option>Europe</option>
-              <option>Bangladesh</option>
-            </select>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <div>
+              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5">
+                Service location
+              </label>
+              <select className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary outline-none transition">
+                <option value="">Select location</option> <option>China</option>
+                <option>Southeast Asia</option> <option>Europe</option>
+                <option>Bangladesh</option>
+              </select>
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5">
+                Service <span className="text-red-500">*</span>
+              </label>
+              <input
+                type="text"
+                required
+                className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-primary outline-none transition"
+                placeholder="Service"
+              />
+            </div>
           </div>
-
           <div>
             <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5">
               Message <span className="text-red-500">*</span>
@@ -190,10 +179,9 @@ const Qutation_form = ({ isOpen, onClose }) => {
               placeholder="Tell us about your inspection / quotation needs..."
             />
           </div>
-
           <button
             type="submit"
-            className="px-4 py-2 border-2 border-third text-white py-4 bg-third hover:bg-gray-600 font-semibold rounded-full transition duration-300 shadow-md flex items-center justify-center gap-2 text-lg cursor-pointer"
+            className="px-4 border-2 border-third text-third py-4 bg-primary hover:bg-primary/90 font-semibold rounded-full transition duration-300 shadow-md flex items-center justify-center gap-2 text-lg cursor-pointer"
           >
             Submit Quotation Request →
           </button>

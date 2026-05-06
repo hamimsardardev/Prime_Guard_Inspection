@@ -43,7 +43,7 @@ const Service_part = () => {
               <div>
                 <button
                   onClick={handleQutationOpen}
-                  className="relative h-[50px] w-44 inline-flex items-center justify-center overflow-hidden bg-primary text-white shadow-lg transition-all before:absolute before:h-0 before:w-0 before:rounded-full before:bg-third before:duration-500 before:ease-out hover:before:h-56 hover:before:w-56 cursor-pointer"
+                  className="relative h-12.5 w-44 inline-flex items-center justify-center overflow-hidden bg-primary text-white shadow-lg transition-all before:absolute before:h-0 before:w-0 before:rounded-full before:bg-third before:duration-500 before:ease-out hover:before:h-56 hover:before:w-56 cursor-pointer"
                 >
                   <span className="relative z-10">Get Quotation</span>
                 </button>
