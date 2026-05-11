@@ -16,6 +16,19 @@ const Footwear_part = () => {
   function handleQutationClose() {
     setgetQuotation(false);
   }
+
+  // ✅ ONLY ADDED DATA ARRAY
+  const footwearData = [
+    { title: "Casual Footwear", image: "/footwearone.jpg" },
+    { title: "Formal Footwear", image: "/footweartwo.jpg" },
+    { title: "Women’s Footwear", image: "/footwearthree.jpg" },
+    { title: "Sandals & Slippers", image: "/footwearfour.jpg" },
+    { title: "Boots", image: "/footwearfive.jpg" },
+    { title: "Safety Footwear", image: "/footwearsix.jpg" },
+    { title: "Sports Footwear", image: "/footwearseven.jpg" },
+    { title: "Kids & Baby Footwear", image: "/footweareight.jpg" },
+  ];
+
   return (
     <div>
       {/* ================= Banner Section ================= */}
@@ -26,6 +39,7 @@ const Footwear_part = () => {
               <h2 className="text-3xl md:text-4xl text-primary font-semibold leading-tight ">
                 Footwear We Inspect
               </h2>
+
               <p className="w-auto md:w-[420px] lg:w-[560px] text-[16px] md:text-[16px] lg:text-[18px] text-white font-normal leading-tight">
                 We provide comprehensive quality inspection services for a wide
                 range of footwear products to ensure durability, comfort,
@@ -65,10 +79,10 @@ const Footwear_part = () => {
                 customer satisfaction.
               </p>
             </div>
+
             <div className="lg:w-1/5">
               <div className="flex justify-center items-center">
                 <div className="text-center space-y-6">
-                  {/* Title */}
                   <div className="flex items-center justify-center gap-3">
                     <span className="w-1.5 h-5 bg-primary"></span>
                     <h2 className="text-xl font-semibold tracking-wide text-primary">
@@ -76,13 +90,13 @@ const Footwear_part = () => {
                     </h2>
                   </div>
 
-                  {/* Button 1 */}
                   <button
                     onClick={handleQutationOpen}
                     className="w-48 py-3 rounded-full text-[18px] bg-primary border border-primary text-black font-medium hover:bg-transparent hover:text-primary transition"
                   >
                     GET A QUOTE
                   </button>
+
                   <Qutation_form
                     isOpen={getQuotation}
                     onClose={handleQutationClose}
@@ -92,151 +106,33 @@ const Footwear_part = () => {
             </div>
           </div>
 
-          {/* ================= Cards ================= */}
+          {/* ================= Cards (ONLY CHANGED PART) ================= */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 pb-12">
-            {/* Card 1 */}
-            <div className="group rounded-xl overflow-hidden shadow hover:shadow-xl transition">
-              <div className="relative h-64">
-                <Image
-                  src="/footwearone.jpg"
-                  alt="Casual Footwear"
-                  fill
-                  className="object-cover group-hover:scale-105 transition duration-500"
-                />
-                <div className="absolute inset-0 bg-black/50" />
-                <div className="absolute bottom-4 left-4 text-primary font-semibold text-lg">
-                  <a className="hover:text-white hover:underline" href="#">
-                    Casual Footwear
-                  </a>
-                </div>
-              </div>
-            </div>
+            {footwearData.map((item, index) => (
+              <div
+                key={index}
+                className="group rounded-xl overflow-hidden shadow hover:shadow-xl transition"
+              >
+                <div className="relative h-64">
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    className="object-cover group-hover:scale-105 transition duration-500"
+                  />
+                  <div className="absolute inset-0 bg-black/50" />
 
-            {/* Card 2 */}
-            <div className="group rounded-xl overflow-hidden shadow hover:shadow-xl transition">
-              <div className="relative h-64">
-                <Image
-                  src="/footweartwo.jpg"
-                  alt="Formal Footwear"
-                  fill
-                  className="object-cover group-hover:scale-105 transition duration-500"
-                />
-                <div className="absolute inset-0 bg-black/50" />
-                <div className="absolute bottom-4 left-4 text-primary font-semibold text-lg">
-                  <a className="hover:text-white hover:underline" href="#">
-                    Formal Footwear
-                  </a>
+                  <div className="absolute bottom-4 left-4 text-primary font-semibold text-lg">
+                    <a className="hover:text-white hover:underline" href="#">
+                      {item.title}
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
-
-            {/* Card 3 */}
-            <div className="group rounded-xl overflow-hidden shadow hover:shadow-xl transition">
-              <div className="relative h-64">
-                <Image
-                  src="/footwearthree.jpg"
-                  alt="Women’s Footwear"
-                  fill
-                  className="object-cover group-hover:scale-105 transition duration-500"
-                />
-                <div className="absolute inset-0 bg-black/50" />
-                <div className="absolute bottom-4 left-4 text-primary font-semibold text-lg">
-                  <a className="hover:text-white hover:underline" href="#">
-                    Women’s Footwear
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            {/* Card 4 */}
-            <div className="group rounded-xl overflow-hidden shadow hover:shadow-xl transition">
-              <div className="relative h-64">
-                <Image
-                  src="/footwearfour.jpg"
-                  alt="Sandals & Slippers"
-                  fill
-                  className="object-cover group-hover:scale-105 transition duration-500"
-                />
-                <div className="absolute inset-0 bg-black/50" />
-                <div className="absolute bottom-4 left-4 text-primary font-semibold text-lg">
-                  <a className="hover:text-white hover:underline" href="#">
-                    Sandals & Slippers
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            {/* Card 5 */}
-            <div className="group rounded-xl overflow-hidden shadow hover:shadow-xl transition">
-              <div className="relative h-64">
-                <Image
-                  src="/footwearfive.jpg"
-                  alt="Boots"
-                  fill
-                  className="object-cover group-hover:scale-105 transition duration-500"
-                />
-                <div className="absolute inset-0 bg-black/50" />
-                <div className="absolute bottom-4 left-4 text-primary font-semibold text-lg">
-                  <a className="hover:text-white hover:underline" href="#">
-                    Boots
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            {/* Card 6 */}
-            <div className="group rounded-xl overflow-hidden shadow hover:shadow-xl transition">
-              <div className="relative h-64">
-                <Image
-                  src="/footwearsix.jpg"
-                  alt="Safety Footwear"
-                  fill
-                  className="object-cover group-hover:scale-105 transition duration-500"
-                />
-                <div className="absolute inset-0 bg-black/50" />
-                <div className="absolute bottom-4 left-4 text-primary font-semibold text-lg">
-                  <a className="hover:text-white hover:underline" href="#">
-                    Safety Footwear
-                  </a>
-                </div>
-              </div>
-            </div>
-            {/* Card 7 */}
-            <div className="group rounded-xl overflow-hidden shadow hover:shadow-xl transition">
-              <div className="relative h-64">
-                <Image
-                  src="/footwearseven.jpg"
-                  alt="Sports Footwear"
-                  fill
-                  className="object-cover group-hover:scale-105 transition duration-500"
-                />
-                <div className="absolute inset-0 bg-black/50" />
-                <div className="absolute bottom-4 left-4 text-primary font-semibold text-lg">
-                  <a className="hover:text-white hover:underline" href="#">
-                    Sports Footwear
-                  </a>
-                </div>
-              </div>
-            </div>
-            {/* Card 8 */}
-            <div className="group rounded-xl overflow-hidden shadow hover:shadow-xl transition">
-              <div className="relative h-64">
-                <Image
-                  src="/footweareight.jpg"
-                  alt="Kids & Baby Footwear"
-                  fill
-                  className="object-cover group-hover:scale-105 transition duration-500"
-                />
-                <div className="absolute inset-0 bg-black/50" />
-                <div className="absolute bottom-4 left-4 text-primary font-semibold text-lg">
-                  <a className="hover:text-white hover:underline" href="#">
-                    Kids & Baby Footwear
-                  </a>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </Container>
+
         <Sample_part />
       </section>
     </div>

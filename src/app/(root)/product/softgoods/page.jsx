@@ -16,6 +16,46 @@ const Softgoods_part = () => {
   function handleQutationClose() {
     setgetQuotation(false);
   }
+
+  // ONLY ADDED
+  const items = [
+    {
+      img: "/softgoodsimageone.png",
+      alt: "Garments and Apparel Inspection",
+      title: "Garments and Apparel Inspection",
+    },
+    {
+      img: "/softgoodsimagetwo.png",
+      alt: "Footwear Inspection",
+      title: "Footwear Inspection",
+    },
+    {
+      img: "/softgoodsimagethree.png",
+      alt: "Luggage and Bags Inspection",
+      title: "Luggage and Bags Inspection",
+    },
+    {
+      img: "/softgoodsimagefour.png",
+      alt: "Fashion Accessories Inspection",
+      title: "Fashion Accessories Inspection",
+    },
+    {
+      img: "/softgoodsimagefive.png",
+      alt: "Home Textile Inspection",
+      title: "Home Textile Inspection",
+    },
+    {
+      img: "/softgoodsimagesix.png",
+      alt: "Outdoor Textile Inspection",
+      title: "Outdoor Textile Inspection",
+    },
+    {
+      img: "/softgoodsimageseven.png",
+      alt: "Fabric Inspection",
+      title: "Fabric Inspection",
+    },
+  ];
+
   return (
     <div>
       {/* ================= Banner Section ================= */}
@@ -28,15 +68,7 @@ const Softgoods_part = () => {
                   Soft Goods/Textile
                 </h2>
                 <p className="w-auto md:w-[420px] lg:w-[720px] text-[16px] md:text-[16px] lg:text-[18px] text-white font-normal leading-tight">
-                  Soft goods inspection is a quality control process that
-                  ensures apparel and textile products meet required standards
-                  before shipment. It includes fabric checking, stitching
-                  inspection, measurement verification, defect detection, and
-                  packaging review. By following AQL standards and conducting
-                  inspections during production and final stages, manufacturers
-                  can reduce defects, ensure compliance, protect brand
-                  reputation, and deliver consistent, high-quality products to
-                  customers.
+                  Soft goods inspection is a quality control process that ensures apparel and textile products meet required standards before shipment. It includes fabric checking, stitching inspection, measurement verification, defect detection, and packaging review. By following AQL standards and conducting inspections during production and final stages, manufacturers can reduce defects, ensure compliance, protect brand reputation, and deliver consistent, high-quality products to customers.
                 </p>
 
                 <div>
@@ -64,10 +96,10 @@ const Softgoods_part = () => {
                 Soft Goods/Textile item we Serve
               </h3>
             </div>
+
             <div className="lg:w-1/5">
               <div className="flex justify-center items-center">
                 <div className="text-center space-y-6">
-                  {/* Title */}
                   <div className="flex items-center justify-center gap-3">
                     <span className="w-1.5 h-5 bg-primary"></span>
                     <h2 className="text-xl font-semibold tracking-wide text-primary">
@@ -75,13 +107,13 @@ const Softgoods_part = () => {
                     </h2>
                   </div>
 
-                  {/* Button 1 */}
                   <button
                     onClick={handleQutationOpen}
                     className="w-48 py-3 rounded-full bg-primary border border-primary text-black font-medium hover:bg-transparent hover:text-primary transition"
                   >
                     GET A QUOTE
                   </button>
+
                   <Qutation_form
                     isOpen={getQuotation}
                     onClose={handleQutationClose}
@@ -91,129 +123,29 @@ const Softgoods_part = () => {
             </div>
           </div>
 
-          {/* ================= Cards ================= */}
+          {/* ================= Cards (MAPPED ONLY) ================= */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 pb-12">
-            {/* Card 1 */}
-            <div className="group rounded-xl overflow-hidden shadow hover:shadow-xl transition">
-              <div className="relative h-64">
-                <Image
-                  src="/softgoodsimageone.png"
-                  alt="Garments and Apparel Inspection"
-                  fill
-                  className="object-cover group-hover:scale-105 transition duration-500"
-                />
-                <div className="absolute inset-0 bg-black/50" />
-                <div className="absolute bottom-4 left-4 text-primary font-semibold text-lg">
-                  <a className="hover:text-white hover:underline" href="#">
-                    Garments and Apparel Inspection
-                  </a>
+            {items.map((item, index) => (
+              <div
+                key={index}
+                className="group rounded-xl overflow-hidden shadow hover:shadow-xl transition"
+              >
+                <div className="relative h-64">
+                  <Image
+                    src={item.img}
+                    alt={item.alt}
+                    fill
+                    className="object-cover group-hover:scale-105 transition duration-500"
+                  />
+                  <div className="absolute inset-0 bg-black/50" />
+                  <div className="absolute bottom-4 left-4 text-primary font-semibold text-lg">
+                    <a className="hover:text-white hover:underline" href="#">
+                      {item.title}
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
-
-            {/* Card 2 */}
-            <div className="group rounded-xl overflow-hidden shadow hover:shadow-xl transition">
-              <div className="relative h-64">
-                <Image
-                  src="/softgoodsimagetwo.png"
-                  alt="Footwear Inspection"
-                  fill
-                  className="object-cover group-hover:scale-105 transition duration-500"
-                />
-                <div className="absolute inset-0 bg-black/50" />
-                <div className="absolute bottom-4 left-4 text-primary font-semibold text-lg">
-                  <a className="hover:text-white hover:underline" href="#">
-                    Footwear Inspection
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            {/* Card 3 */}
-            <div className="group rounded-xl overflow-hidden shadow hover:shadow-xl transition">
-              <div className="relative h-64">
-                <Image
-                  src="/softgoodsimagethree.png"
-                  alt="Luggage and Bags Inspection"
-                  fill
-                  className="object-cover group-hover:scale-105 transition duration-500"
-                />
-                <div className="absolute inset-0 bg-black/50" />
-                <div className="absolute bottom-4 left-4 text-primary font-semibold text-lg">
-                  <a className="hover:text-white hover:underline" href="#">
-                    Luggage and Bags Inspection
-                  </a>
-                </div>
-              </div>
-            </div>
-            {/* Card 4 */}
-            <div className="group rounded-xl overflow-hidden shadow hover:shadow-xl transition">
-              <div className="relative h-64">
-                <Image
-                  src="/softgoodsimagefour.png"
-                  alt="Fashion Accessories Inspection"
-                  fill
-                  className="object-cover group-hover:scale-105 transition duration-500"
-                />
-                <div className="absolute inset-0 bg-black/50" />
-                <div className="absolute bottom-4 left-4 text-primary font-semibold text-lg">
-                  <a className="hover:text-white hover:underline" href="#">
-                    Fashion Accessories Inspection
-                  </a>
-                </div>
-              </div>
-            </div>
-            {/* Card 5 */}
-            <div className="group rounded-xl overflow-hidden shadow hover:shadow-xl transition">
-              <div className="relative h-64">
-                <Image
-                  src="/softgoodsimagefive.png"
-                  alt="ome Textile Inspection"
-                  fill
-                  className="object-cover group-hover:scale-105 transition duration-500"
-                />
-                <div className="absolute inset-0 bg-black/50" />
-                <div className="absolute bottom-4 left-4 text-primary font-semibold text-lg">
-                  <a className="hover:text-white hover:underline" href="#">
-                    Home Textile Inspection
-                  </a>
-                </div>
-              </div>
-            </div>
-            {/* Card 6 */}
-            <div className="group rounded-xl overflow-hidden shadow hover:shadow-xl transition">
-              <div className="relative h-64">
-                <Image
-                  src="/softgoodsimagesix.png"
-                  alt="Outdoor Textile Inspection"
-                  fill
-                  className="object-cover group-hover:scale-105 transition duration-500"
-                />
-                <div className="absolute inset-0 bg-black/50" />
-                <div className="absolute bottom-4 left-4 text-primary font-semibold text-lg">
-                  <a className="hover:text-white hover:underline" href="#">
-                    Outdoor Textile Inspection
-                  </a>
-                </div>
-              </div>
-            </div>
-            {/* Card 7 */}
-            <div className="group rounded-xl overflow-hidden shadow hover:shadow-xl transition">
-              <div className="relative h-64">
-                <Image
-                  src="/softgoodsimageseven.png"
-                  alt="Fabric Inspection"
-                  fill
-                  className="object-cover group-hover:scale-105 transition duration-500"
-                />
-                <div className="absolute inset-0 bg-black/50" />
-                <div className="absolute bottom-4 left-4 text-primary font-semibold text-lg">
-                  <a className="hover:text-white hover:underline" href="#">
-                    Fabric Inspection
-                  </a>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </Container>
         <Sample_part />

@@ -16,6 +16,52 @@ const Product_part = () => {
   function handleQutationClose() {
     setgetQuotation(false);
   }
+
+  const products = [
+    {
+      img: "/product1.jpg",
+      alt: "Product Inspection",
+      title: "Electronics Products Inspection",
+      link: "/product/electronisproduct",
+    },
+    {
+      img: "/product2.jpg",
+      alt: "Industrial Product Inspection",
+      title: "Soft Goods",
+      link: "#",
+    },
+    {
+      img: "/product3.jpg",
+      alt: "Full Inspection",
+      title: "Hard Goods",
+      link: "#",
+    },
+    {
+      img: "/product4.jpg",
+      alt: "Full Inspection",
+      title: "Mechanical Products",
+      link: "#",
+    },
+    {
+      img: "/product5.jpg",
+      alt: "Full Inspection",
+      title: "Chemical Products",
+      link: "#",
+    },
+    {
+      img: "/product6.jpg",
+      alt: "Full Inspection",
+      title: "Food",
+      link: "#",
+    },
+    {
+      img: "/product7.jpg",
+      alt: "Full Inspection",
+      title: "Agriculture Products",
+      link: "#",
+    },
+  ];
+
   return (
     <div>
       {/* ================= Banner Section ================= */}
@@ -25,20 +71,21 @@ const Product_part = () => {
             <h2 className="text-[24px] md:text-[30px] md:text-[36px] text-primary font-semibold leading-[36px]">
               Product & Industries
             </h2>
+
             <p className="text-white text-base leading-relaxed max-w-[720px]">
               We provide inspection, audit, and quality control services across
               a wide range of products and industries — ensuring compliance,
-              safety, and performance at every stage. From manufacturing to
-              consumer goods, we safeguard your standards.
+              safety, and performance at every stage.
             </p>
 
             <div>
               <button
                 onClick={handleQutationOpen}
-                className="relative h-[50px] w-44 inline-flex items-center justify-center overflow-hidden bg-primary text-white shadow-lg transition-all before:absolute before:h-0 before:w-0 before:rounded-full before:bg-third before:duration-500 before:ease-out hover:before:h-56 hover:before:w-56"
+                className="relative h-[50px] w-44 inline-flex items-center justify-center overflow-hidden bg-primary text-white shadow-lg transition-all before:absolute before:h-0 before:w-0 before:rounded-full before:bg-third before:duration-500 hover:before:h-56 hover:before:w-56"
               >
                 <span className="relative z-10">Get Quotation</span>
               </button>
+
               <Qutation_form
                 isOpen={getQuotation}
                 onClose={handleQutationClose}
@@ -61,165 +108,37 @@ const Product_part = () => {
                 PGI provides quality control inspection, supplier management and
                 development, project quality management, Acceptance of
                 government procurement, and lab testing for all kinds of
-                electric products, soft goods, hard goods, mechanical products,
-                chemical products, food, and agriculture products.
+                products.
               </p>
             </div>
-            <div className="lg:w-1/5">
-              <div className="flex justify-center items-center">
-                <div className="text-center space-y-6">
-                  {/* Title */}
-                  <div className="flex items-center justify-center gap-3">
-                    <span className="w-1.5 h-5 bg-primary"></span>
-                    <h2 className="text-xl font-semibold tracking-wide text-primary">
-                      CONTACT US
-                    </h2>
-                  </div>
-
-                  {/* Button 1 */}
-                  <button
-                    onClick={handleQutationOpen}
-                    className="w-48 py-3 rounded-full bg-primary border border-primary text-black font-medium hover:bg-transparent hover:text-primary transition"
-                  >
-                    GET A QUOTE
-                  </button>
-                  <Qutation_form
-                    isOpen={getQuotation}
-                    onClose={handleQutationClose}
-                  />
-                </div>
-              </div>
-            </div>
           </div>
 
-          {/* ================= Cards ================= */}
+          {/* ================= Cards (MAP VERSION) ================= */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 pb-12">
-            {/* Card 1 */}
-            <div className="group rounded-xl overflow-hidden shadow hover:shadow-xl transition">
-              <div className="relative h-64">
-                <Image
-                  src="/product1.jpg"
-                  alt="Product Inspection"
-                  fill
-                  className="object-cover group-hover:scale-105 transition duration-500"
-                />
-                <div className="absolute inset-0 bg-black/50" />
-                <div className="absolute bottom-4 left-4 text-primary font-semibold text-lg">
-                  <a
-                    className="hover:text-white hover:underline"
-                    href="/product/electronisproduct"
-                  >
-                    Electronics Products Inspection
-                  </a>
+            {products.map((item, index) => (
+              <div
+                key={index}
+                className="group rounded-xl overflow-hidden shadow hover:shadow-xl transition"
+              >
+                <div className="relative h-64">
+                  <Image
+                    src={item.img}
+                    alt={item.alt}
+                    fill
+                    className="object-cover group-hover:scale-105 transition duration-500"
+                  />
+                  <div className="absolute inset-0 bg-black/50" />
+                  <div className="absolute bottom-4 left-4 text-primary font-semibold text-lg">
+                    <a className="hover:text-white hover:underline" href={item.link}>
+                      {item.title}
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
-
-            {/* Card 2 */}
-            <div className="group rounded-xl overflow-hidden shadow hover:shadow-xl transition">
-              <div className="relative h-64">
-                <Image
-                  src="/product2.jpg"
-                  alt="Industrial Product Inspection"
-                  fill
-                  className="object-cover group-hover:scale-105 transition duration-500"
-                />
-                <div className="absolute inset-0 bg-black/50" />
-                <div className="absolute bottom-4 left-4 text-primary font-semibold text-lg">
-                  <a className="hover:text-white hover:underline" href="#">
-                    Soft Goods
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            {/* Card 3 */}
-            <div className="group rounded-xl overflow-hidden shadow hover:shadow-xl transition">
-              <div className="relative h-64">
-                <Image
-                  src="/product3.jpg"
-                  alt="Full Inspection"
-                  fill
-                  className="object-cover group-hover:scale-105 transition duration-500"
-                />
-                <div className="absolute inset-0 bg-black/50" />
-                <div className="absolute bottom-4 left-4 text-primary font-semibold text-lg">
-                  <a className="hover:text-white hover:underline" href="#">
-                    Hard Goods
-                  </a>
-                </div>
-              </div>
-            </div>
-            {/* Card 4 */}
-            <div className="group rounded-xl overflow-hidden shadow hover:shadow-xl transition">
-              <div className="relative h-64">
-                <Image
-                  src="/product4.jpg"
-                  alt="Full Inspection"
-                  fill
-                  className="object-cover group-hover:scale-105 transition duration-500"
-                />
-                <div className="absolute inset-0 bg-black/50" />
-                <div className="absolute bottom-4 left-4 text-primary font-semibold text-lg">
-                  <a className="hover:text-white hover:underline" href="#">
-                    Mechanical Products
-                  </a>
-                </div>
-              </div>
-            </div>
-            {/* Card 5 */}
-            <div className="group rounded-xl overflow-hidden shadow hover:shadow-xl transition">
-              <div className="relative h-64">
-                <Image
-                  src="/product5.jpg"
-                  alt="Full Inspection"
-                  fill
-                  className="object-cover group-hover:scale-105 transition duration-500"
-                />
-                <div className="absolute inset-0 bg-black/50" />
-                <div className="absolute bottom-4 left-4 text-primary font-semibold text-lg">
-                  <a className="hover:text-white hover:underline" href="#">
-                    Chemical Products
-                  </a>
-                </div>
-              </div>
-            </div>
-            {/* Card 6 */}
-            <div className="group rounded-xl overflow-hidden shadow hover:shadow-xl transition">
-              <div className="relative h-64">
-                <Image
-                  src="/product6.jpg"
-                  alt="Full Inspection"
-                  fill
-                  className="object-cover group-hover:scale-105 transition duration-500"
-                />
-                <div className="absolute inset-0 bg-black/50" />
-                <div className="absolute bottom-4 left-4 text-primary font-semibold text-lg">
-                  <a className="hover:text-white hover:underline" href="#">
-                    Food
-                  </a>
-                </div>
-              </div>
-            </div>
-            {/* Card 7 */}
-            <div className="group rounded-xl overflow-hidden shadow hover:shadow-xl transition">
-              <div className="relative h-64">
-                <Image
-                  src="/product7.jpg"
-                  alt="Full Inspection"
-                  fill
-                  className="object-cover group-hover:scale-105 transition duration-500"
-                />
-                <div className="absolute inset-0 bg-black/50" />
-                <div className="absolute bottom-4 left-4 text-primary font-semibold text-lg">
-                  <a className="hover:text-white hover:underline" href="#">
-                    Agriculture Products
-                  </a>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </Container>
+
         <Sample_part />
       </section>
     </div>

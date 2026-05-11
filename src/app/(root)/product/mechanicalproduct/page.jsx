@@ -17,6 +17,58 @@ const Mechanical_part = () => {
   function handleQutationClose() {
     setgetQuotation(false);
   }
+
+  const items = [
+    {
+      img: "/mechanicalimageone.jpg",
+      alt: "Electromechanical device",
+      title: "Electromechanical device",
+      link: "/product/electronisproduct",
+    },
+    {
+      img: "/mechanicalimagetwo.jpg",
+      alt: "Machine parts",
+      title: "Machine parts",
+      link: "#",
+    },
+    {
+      img: "/mechanicalimagethree.jpg",
+      alt: "Auto parts",
+      title: "Auto parts",
+      link: "#",
+    },
+    {
+      img: "/mechanicalimagefour.jpg",
+      alt: "Pump",
+      title: "Pump",
+      link: "#",
+    },
+    {
+      img: "/mechanicalimagefive.jpg",
+      alt: "Mold",
+      title: "Mold",
+      link: "#",
+    },
+    {
+      img: "/mechanicalimagesix.jpg",
+      alt: "Machining parts",
+      title: "Machining parts",
+      link: "#",
+    },
+    {
+      img: "/mechanicalimageseven.jpg",
+      alt: "Die casting",
+      title: "Die casting",
+      link: "#",
+    },
+    {
+      img: "/mechanicalimageeight.jpg",
+      alt: "Stamping parts",
+      title: "Stamping parts",
+      link: "#",
+    },
+  ];
+
   return (
     <div>
       {/* ================= Banner Section ================= */}
@@ -30,10 +82,7 @@ const Mechanical_part = () => {
               <p className="w-auto md:w-[420px] lg:w-[720px] text-[16px] md:text-[16px] lg:text-[18px] text-white font-normal leading-tight">
                 PGI Inspection provides third-party quality control and quality
                 assurance services enable you to ensure quality and safety in
-                mechanical products with a variety of goods like
-                electromechanical device, machine parts, auto parts, pump, and
-                die casting to support your regulatory compliance in different
-                consumer markets.
+                mechanical products with a variety of goods like electromechanical device, machine parts, auto parts, pump, and die casting to support your regulatory compliance in different consumer markets.
               </p>
 
               <div>
@@ -74,10 +123,10 @@ const Mechanical_part = () => {
                 mechanical products to the market
               </p>
             </div>
+
             <div className="lg:w-1/5">
               <div className="flex justify-center items-center">
                 <div className="text-center space-y-6">
-                  {/* Title */}
                   <div className="flex items-center justify-center gap-3">
                     <span className="w-1.5 h-5 bg-primary"></span>
                     <h2 className="text-xl font-semibold tracking-wide text-primary">
@@ -85,13 +134,13 @@ const Mechanical_part = () => {
                     </h2>
                   </div>
 
-                  {/* Button 1 */}
                   <button
                     onClick={handleQutationOpen}
                     className="w-48 py-3 rounded-full bg-primary border border-primary text-black font-medium hover:bg-transparent hover:text-primary transition"
                   >
                     GET A QUOTE
                   </button>
+
                   <Qutation_form
                     isOpen={getQuotation}
                     onClose={handleQutationClose}
@@ -101,149 +150,29 @@ const Mechanical_part = () => {
             </div>
           </div>
 
-          {/* ================= Cards ================= */}
+          {/* ================= Cards (MAPPED ONLY) ================= */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 pb-12">
-            {/* Card 1 */}
-            <div className="group rounded-xl overflow-hidden shadow hover:shadow-xl transition">
-              <div className="relative h-64">
-                <Image
-                  src="/mechanicalimageone.jpg"
-                  alt="Electromechanical device"
-                  fill
-                  className="object-cover group-hover:scale-105 transition duration-500"
-                />
-                <div className="absolute inset-0 bg-black/50" />
-                <div className="absolute bottom-4 left-4 text-primary font-semibold text-lg">
-                  <a
-                    className="hover:text-white hover:underline"
-                    href="/product/electronisproduct"
-                  >
-                    Electromechanical device
-                  </a>
+            {items.map((item, index) => (
+              <div
+                key={index}
+                className="group rounded-xl overflow-hidden shadow hover:shadow-xl transition"
+              >
+                <div className="relative h-64">
+                  <Image
+                    src={item.img}
+                    alt={item.alt}
+                    fill
+                    className="object-cover group-hover:scale-105 transition duration-500"
+                  />
+                  <div className="absolute inset-0 bg-black/50" />
+                  <div className="absolute bottom-4 left-4 text-primary font-semibold text-lg">
+                    <a className="hover:text-white hover:underline" href={item.link}>
+                      {item.title}
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
-
-            {/* Card 2 */}
-            <div className="group rounded-xl overflow-hidden shadow hover:shadow-xl transition">
-              <div className="relative h-64">
-                <Image
-                  src="/mechanicalimagetwo.jpg"
-                  alt="Machine parts"
-                  fill
-                  className="object-cover group-hover:scale-105 transition duration-500"
-                />
-                <div className="absolute inset-0 bg-black/50" />
-                <div className="absolute bottom-4 left-4 text-primary font-semibold text-lg">
-                  <a className="hover:text-white hover:underline" href="#">
-                    Machine parts
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            {/* Card 3 */}
-            <div className="group rounded-xl overflow-hidden shadow hover:shadow-xl transition">
-              <div className="relative h-64">
-                <Image
-                  src="/mechanicalimagethree.jpg"
-                  alt="Auto parts"
-                  fill
-                  className="object-cover group-hover:scale-105 transition duration-500"
-                />
-                <div className="absolute inset-0 bg-black/50" />
-                <div className="absolute bottom-4 left-4 text-primary font-semibold text-lg">
-                  <a className="hover:text-white hover:underline" href="#">
-                    Auto parts
-                  </a>
-                </div>
-              </div>
-            </div>
-            {/* Card 4 */}
-            <div className="group rounded-xl overflow-hidden shadow hover:shadow-xl transition">
-              <div className="relative h-64">
-                <Image
-                  src="/mechanicalimagefour.jpg"
-                  alt="Pump"
-                  fill
-                  className="object-cover group-hover:scale-105 transition duration-500"
-                />
-                <div className="absolute inset-0 bg-black/50" />
-                <div className="absolute bottom-4 left-4 text-primary font-semibold text-lg">
-                  <a className="hover:text-white hover:underline" href="#">
-                    Pump
-                  </a>
-                </div>
-              </div>
-            </div>
-            {/* Card 5 */}
-            <div className="group rounded-xl overflow-hidden shadow hover:shadow-xl transition">
-              <div className="relative h-64">
-                <Image
-                  src="/mechanicalimagefive.jpg"
-                  alt="Mold"
-                  fill
-                  className="object-cover group-hover:scale-105 transition duration-500"
-                />
-                <div className="absolute inset-0 bg-black/50" />
-                <div className="absolute bottom-4 left-4 text-primary font-semibold text-lg">
-                  <a className="hover:text-white hover:underline" href="#">
-                    Mold
-                  </a>
-                </div>
-              </div>
-            </div>
-            {/* Card 6 */}
-            <div className="group rounded-xl overflow-hidden shadow hover:shadow-xl transition">
-              <div className="relative h-64">
-                <Image
-                  src="/mechanicalimagesix.jpg"
-                  alt="Machining parts"
-                  fill
-                  className="object-cover group-hover:scale-105 transition duration-500"
-                />
-                <div className="absolute inset-0 bg-black/50" />
-                <div className="absolute bottom-4 left-4 text-primary font-semibold text-lg">
-                  <a className="hover:text-white hover:underline" href="#">
-                    Machining parts
-                  </a>
-                </div>
-              </div>
-            </div>
-            {/* Card 7 */}
-            <div className="group rounded-xl overflow-hidden shadow hover:shadow-xl transition">
-              <div className="relative h-64">
-                <Image
-                  src="/mechanicalimageseven.jpg"
-                  alt="Die casting"
-                  fill
-                  className="object-cover group-hover:scale-105 transition duration-500"
-                />
-                <div className="absolute inset-0 bg-black/50" />
-                <div className="absolute bottom-4 left-4 text-primary font-semibold text-lg">
-                  <a className="hover:text-white hover:underline" href="#">
-                    Die casting
-                  </a>
-                </div>
-              </div>
-            </div>
-            {/* Card 8 */}
-            <div className="group rounded-xl overflow-hidden shadow hover:shadow-xl transition">
-              <div className="relative h-64">
-                <Image
-                  src="/mechanicalimageeight.jpg"
-                  alt="Stamping parts"
-                  fill
-                  className="object-cover group-hover:scale-105 transition duration-500"
-                />
-                <div className="absolute inset-0 bg-black/50" />
-                <div className="absolute bottom-4 left-4 text-primary font-semibold text-lg">
-                  <a className="hover:text-white hover:underline" href="#">
-                    Stamping parts
-                  </a>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </Container>
         <Sample_part />

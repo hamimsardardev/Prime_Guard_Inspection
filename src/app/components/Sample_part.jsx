@@ -36,7 +36,7 @@ const Sample_part = () => {
                   Sample Report
                 </h2>
 
-                <p className="w-auto lg:w-[560px] text-[14px] lg:text-[18px] font-medium text-white md:text-[16px] leading-[24px] ">
+                <p className="w-auto lg:w-140 text-[14px] lg:text-[18px] font-medium text-white md:text-[16px] leading-6 ">
                   A detailed report with inspection results and photographs helps to assess goods quality and safety when performing an inspection. Review a PGI sample report related to your product of interest.
                 </p>
 
@@ -44,7 +44,7 @@ const Sample_part = () => {
                   <Link
                     href="/resourses/samplereport"
                     type="button"
-                    className="relative h-[50px] w-50 inline-flex items-center justify-center overflow-hidden bg-primary text-white shadow-2xl transition-all before:absolute before:h-0 before:w-0 before:rounded-full before:bg-gray-600 before:duration-500 before:ease-out hover:shadow-primary hover:before:h-56 hover:before:w-56 cursor-pointer"
+                    className="relative h-12.5 w-50 inline-flex items-center justify-center overflow-hidden bg-primary text-white shadow-2xl transition-all before:absolute before:h-0 before:w-0 before:rounded-full before:bg-gray-600 before:duration-500 before:ease-out hover:shadow-primary hover:before:h-56 hover:before:w-56 cursor-pointer"
                   >
                     <span className="relative z-10 flex items-center gap-2">
                       Get a Sample report

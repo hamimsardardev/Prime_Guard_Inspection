@@ -9,16 +9,16 @@ const Blog = () => {
     <>
       <section>
         <Container>
-          <div className="border-b-1 border-t-1 border-gray-600 py-[80px]">
+          <div className="border-b border-t border-gray-600 py-20">
             <motion.div
-              className="text-center mb-[50px]"
+              className="text-center mb-12.5"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
               <motion.h5
-                className="font-dmSans text-[48px] font-semibold leading-[66px] text-primary"
+                className="font-dmSans text-[48px] font-semibold leading-16.5 text-primary"
                 initial={{ opacity: 0, y: -20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
@@ -27,7 +27,7 @@ const Blog = () => {
               </motion.h5>
 
               <motion.p
-                className="w-auto text-[16px] lg:text-[18px] font-regular leading-[16px] lg:leading-[26px] text-white lg:w-[940px] mx-auto mt-4 lg:mt-6"
+                className="w-auto text-[16px] lg:text-[18px] font-regular leading-4 lg:leading-6.5 text-white lg:w-235 mx-auto mt-4 lg:mt-6"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}

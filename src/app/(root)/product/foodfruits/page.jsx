@@ -16,6 +16,31 @@ const Foodfruits_part = () => {
   function handleQutationClose() {
     setgetQuotation(false);
   }
+
+  // ================= DATA =================
+  const foodItems = [
+    {
+      image: "/foodfruitsone.jpg",
+      title: "Fresh Fruits",
+    },
+    {
+      image: "/foodfruitstwo.jpg",
+      title: "Fresh Vegetables",
+    },
+    {
+      image: "/foodfruitsthree.jpg",
+      title: "Processed & Packed Food",
+    },
+    {
+      image: "/foodfruitsfour.jpg",
+      title: "Dairy & Beverage Products",
+    },
+    {
+      image: "/foodfruitsfive.jpg",
+      title: "Grains & Agricultural Products",
+    },
+  ];
+
   return (
     <div>
       {/* ================= Banner Section ================= */}
@@ -23,10 +48,11 @@ const Foodfruits_part = () => {
         <div className="bg-gray-900/80">
           <Container>
             <div className="space-y-4 py-32 md:py-56">
-              <h2 className="text-3xl md:text-4xl text-primary font-semibold leading-tight ">
+              <h2 className="text-3xl md:text-4xl text-primary font-semibold leading-tight">
                 Food & Fruits We Inspect
               </h2>
-              <p className="w-auto md:w-[420px] lg:w-[560px] text-[16px] md:text-[16px] lg:text-[18px] text-white font-normal leading-tight">
+
+              <p className="w-auto md:w-105lg:w-140 text-[16px] md:text-[16px] lg:text-[18px] text-white font-normal leading-tight">
                 We provide comprehensive inspection services for fresh produce
                 and food products to ensure quality, safety, hygiene, and
                 compliance with international import standards.
@@ -35,7 +61,7 @@ const Foodfruits_part = () => {
               <div>
                 <Link
                   href="/resourses/samplereport"
-                  className="relative h-[50px] w-56 inline-flex items-center justify-center overflow-hidden bg-primary text-white shadow-lg transition-all before:absolute before:h-0 before:w-0 before:rounded-full before:bg-third before:duration-500 before:ease-out hover:before:h-60 hover:before:w-60"
+                  className="relative h-12.5 w-56 inline-flex items-center justify-center overflow-hidden bg-primary text-white shadow-lg transition-all before:absolute before:h-0 before:w-0 before:rounded-full before:bg-third before:duration-500 before:ease-out hover:before:h-60 hover:before:w-60"
                 >
                   <span className="relative z-10">
                     Download a Sample Report
@@ -56,7 +82,7 @@ const Foodfruits_part = () => {
                 Food & Fruits we Serve
               </h3>
 
-              <p className="text-white text-base leading-relaxed max-w-[820px]">
+              <p className="text-white text-base leading-relaxed max-w-205">
                 We provide specialized inspection services for fresh produce and
                 food products to ensure quality, safety, and compliance with
                 international standards. From fruits and vegetables to processed
@@ -64,10 +90,10 @@ const Foodfruits_part = () => {
                 and storage conditions to protect your brand and customer trust.
               </p>
             </div>
+
             <div className="lg:w-1/5">
               <div className="flex justify-center items-center">
                 <div className="text-center space-y-6">
-                  {/* Title */}
                   <div className="flex items-center justify-center gap-3">
                     <span className="w-1.5 h-5 bg-primary"></span>
                     <h2 className="text-xl font-semibold tracking-wide text-primary">
@@ -75,13 +101,13 @@ const Foodfruits_part = () => {
                     </h2>
                   </div>
 
-                  {/* Button 1 */}
                   <button
                     onClick={handleQutationOpen}
                     className="w-48 py-3 rounded-full bg-primary border border-primary text-black font-medium hover:bg-transparent hover:text-primary transition"
                   >
                     GET A QUOTE
                   </button>
+
                   <Qutation_form
                     isOpen={getQuotation}
                     onClose={handleQutationClose}
@@ -91,99 +117,34 @@ const Foodfruits_part = () => {
             </div>
           </div>
 
-          {/* ================= Cards ================= */}
+          {/* ================= Cards (MAP VERSION) ================= */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 pb-12">
-            {/* Card 1 */}
-            <div className="group rounded-xl overflow-hidden shadow hover:shadow-xl transition">
-              <div className="relative h-64">
-                <Image
-                  src="/foodfruitsone.jpg"
-                  alt="Fresh Fruits"
-                  fill
-                  className="object-cover group-hover:scale-105 transition duration-500"
-                />
-                <div className="absolute inset-0 bg-black/50" />
-                <div className="absolute bottom-4 left-4 text-primary font-semibold text-lg">
-                  <a className="hover:text-white hover:underline" href="#">
-                    Fresh Fruits
-                  </a>
-                </div>
-              </div>
-            </div>
+            {foodItems.map((item, index) => (
+              <div
+                key={index}
+                className="group rounded-xl overflow-hidden shadow hover:shadow-xl transition"
+              >
+                <div className="relative h-64">
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    className="object-cover group-hover:scale-105 transition duration-500"
+                  />
 
-            {/* Card 2 */}
-            <div className="group rounded-xl overflow-hidden shadow hover:shadow-xl transition">
-              <div className="relative h-64">
-                <Image
-                  src="/foodfruitstwo.jpg"
-                  alt="Fresh Vegetables"
-                  fill
-                  className="object-cover group-hover:scale-105 transition duration-500"
-                />
-                <div className="absolute inset-0 bg-black/50" />
-                <div className="absolute bottom-4 left-4 text-primary font-semibold text-lg">
-                  <a className="hover:text-white hover:underline" href="#">
-                    Fresh Vegetables
-                  </a>
-                </div>
-              </div>
-            </div>
+                  <div className="absolute inset-0 bg-black/50" />
 
-            {/* Card 3 */}
-            <div className="group rounded-xl overflow-hidden shadow hover:shadow-xl transition">
-              <div className="relative h-64">
-                <Image
-                  src="/foodfruitsthree.jpg"
-                  alt="Processed & Packed Food"
-                  fill
-                  className="object-cover group-hover:scale-105 transition duration-500"
-                />
-                <div className="absolute inset-0 bg-black/50" />
-                <div className="absolute bottom-4 left-4 text-primary font-semibold text-lg">
-                  <a className="hover:text-white hover:underline" href="#">
-                    Processed & Packed Food
-                  </a>
+                  <div className="absolute bottom-4 left-4 text-primary font-semibold text-lg">
+                    <a className="hover:text-white hover:underline" href="#">
+                      {item.title}
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
-
-            {/* Card 4 */}
-            <div className="group rounded-xl overflow-hidden shadow hover:shadow-xl transition">
-              <div className="relative h-64">
-                <Image
-                  src="/foodfruitsfour.jpg"
-                  alt="Dairy & Beverage Products"
-                  fill
-                  className="object-cover group-hover:scale-105 transition duration-500"
-                />
-                <div className="absolute inset-0 bg-black/50" />
-                <div className="absolute bottom-4 left-4 text-primary font-semibold text-lg">
-                  <a className="hover:text-white hover:underline" href="#">
-                    Dairy & Beverage Products
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            {/* Card 5 */}
-            <div className="group rounded-xl overflow-hidden shadow hover:shadow-xl transition">
-              <div className="relative h-64">
-                <Image
-                  src="/foodfruitsfive.jpg"
-                  alt="Grains & Agricultural Products"
-                  fill
-                  className="object-cover group-hover:scale-105 transition duration-500"
-                />
-                <div className="absolute inset-0 bg-black/50" />
-                <div className="absolute bottom-4 left-4 text-primary font-semibold text-lg">
-                  <a className="hover:text-white hover:underline" href="#">
-                    Grains & Agricultural Products
-                  </a>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </Container>
+
         <Sample_part />
       </section>
     </div>
